@@ -731,21 +731,21 @@ export default class BaseApplication {
 		this.database_.setLogExcludedQueryTypes(['SELECT']);
 		this.database_.setLogger(this.dbLogger_);
 
-		if (Setting.value('env') === 'dev') {
-			if (shim.isElectron()) {
-				this.database_.extensionToLoad = './lib/sql-extensions/spellfix';
-			}
-		} else {
-			if (shim.isElectron()) {
-				if (shim.isWindows()) {
-					const appDir = process.execPath.substring(0, process.execPath.lastIndexOf('\\'));
-					this.database_.extensionToLoad = `${appDir}/usr/lib/spellfix`;
-				} else {
-					const appDir = process.execPath.substring(0, process.execPath.lastIndexOf('/'));
-					this.database_.extensionToLoad = `${appDir}/usr/lib/spellfix`;
-				}
-			}
-		}
+		// if (Setting.value('env') === 'dev') {
+		// 	if (shim.isElectron()) {
+		// 		this.database_.extensionToLoad = './lib/sql-extensions/spellfix';
+		// 	}
+		// } else {
+		// 	if (shim.isElectron()) {
+		// 		if (shim.isWindows()) {
+		// 			const appDir = process.execPath.substring(0, process.execPath.lastIndexOf('\\'));
+		// 			this.database_.extensionToLoad = `${appDir}/usr/lib/spellfix`;
+		// 		} else {
+		// 			const appDir = process.execPath.substring(0, process.execPath.lastIndexOf('/'));
+		// 			this.database_.extensionToLoad = `${appDir}/usr/lib/spellfix`;
+		// 		}
+		// 	}
+		// }
 
 		await this.database_.open({ name: `${profileDir}/database.sqlite` });
 

@@ -4,9 +4,10 @@
   "license": "MIT",
   "author": "Laurent Cozic",
   "scripts": {
-    "test": "gulp buildTests -L && node node_modules/jasmine/bin/jasmine.js --fail-fast=true --config=tests/support/jasmine.json",
+    "test": "node node_modules/jasmine/bin/jasmine.js --fail-fast=true --config=tests/support/jasmine.json",
+    "test-old": "gulp buildTests -L && node node_modules/jasmine/bin/jasmine.js --fail-fast=true --config=tests/support/jasmine.json",
     "test-ci": "gulp buildTests -L && node node_modules/jasmine/bin/jasmine.js --config=tests/support/jasmine.json",
-    "postinstall": "npm run build && patch-package --patch-dir ./patches",
+    "postinstall": "patch-package --patch-dir ./patches",
     "build": "gulp build",
     "start": "gulp build -L && node \"build/main.js\" --stack-trace-enabled --log-level debug --env dev",
     "tsc": "node node_modules/typescript/bin/tsc --project tsconfig.json"
@@ -128,6 +129,7 @@
     "@types/node": "^14.14.6",
     "gulp": "^4.0.2",
     "jasmine": "^3.5.0",
+    "patch-package": "^6.2.2",
     "temp": "^0.9.1",
     "typescript": "3.9.6"
   }

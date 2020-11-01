@@ -171,7 +171,7 @@ export default class InteropService {
 		} else {
 			className = `InteropService_Exporter_${toTitleCase(module.format)}`;
 		}
-		return `lib/services/interop/${className}`;
+		return `./${className}`;
 	}
 
 	private newModuleFromCustomFactory(module:Module) {
