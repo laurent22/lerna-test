@@ -2,13 +2,13 @@ const React = require('react');
 
 const { View, TextInput, StyleSheet } = require('react-native');
 const { connect } = require('react-redux');
-const Folder = require('inner/lib/models/Folder.js');
-const BaseModel = require('inner/lib/BaseModel').default;
-const { ScreenHeader } = require('inner/lib/components/screen-header.js');
-const { BaseScreenComponent } = require('inner/lib/components/base-screen.js');
-const { dialogs } = require('inner/lib/dialogs.js');
-const { themeStyle } = require('inner/lib/components/global-style.js');
-const { _ } = require('inner/lib/locale');
+const Folder = require('../../models/Folder.js');
+const BaseModel = require('../../BaseModel').default;
+const { ScreenHeader } = require('../screen-header.js');
+const { BaseScreenComponent } = require('../base-screen.js');
+const { dialogs } = require('../../dialogs.js');
+const { themeStyle } = require('../global-style.js');
+const { _ } = require('../../locale');
 
 class FolderScreenComponent extends BaseScreenComponent {
 	static navigationOptions() {

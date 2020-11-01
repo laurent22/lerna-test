@@ -1,4 +1,4 @@
-import eventManager from 'inner/lib/eventManager';
+import eventManager from '../../../eventManager';
 
 /**
  * @ignore

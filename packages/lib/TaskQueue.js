@@ -1,6 +1,6 @@
-const time = require('inner/lib/time').default;
-const Setting = require('inner/lib/models/Setting').default;
-const Logger = require('inner/lib/Logger').default;
+const time = require('./time').default;
+const Setting = require('./models/Setting').default;
+const Logger = require('./Logger').default;
 
 class TaskQueue {
 	constructor(name) {

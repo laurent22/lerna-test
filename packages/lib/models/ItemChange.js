@@ -1,6 +1,6 @@
-const BaseModel = require('inner/lib/BaseModel').default;
+const BaseModel = require('../BaseModel').default;
 const Mutex = require('async-mutex').Mutex;
-const shim = require('inner/lib/shim').default;
+const shim = require('../shim').default;
 
 class ItemChange extends BaseModel {
 	static tableName() {

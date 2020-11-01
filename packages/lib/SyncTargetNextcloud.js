@@ -1,12 +1,12 @@
 // The Nextcloud sync target is essentially a wrapper over the WebDAV sync target,
 // thus all the calls to SyncTargetWebDAV to avoid duplicate code.
 
-const BaseSyncTarget = require('inner/lib/BaseSyncTarget.js');
-const { _ } = require('inner/lib/locale');
-const Setting = require('inner/lib/models/Setting').default;
-const Synchronizer = require('inner/lib/Synchronizer').default;
-const SyncTargetWebDAV = require('inner/lib/SyncTargetWebDAV');
-const JoplinServerApi = require('inner/lib/JoplinServerApi.js').default;
+const BaseSyncTarget = require('./BaseSyncTarget.js');
+const { _ } = require('./locale');
+const Setting = require('./models/Setting').default;
+const Synchronizer = require('./Synchronizer').default;
+const SyncTargetWebDAV = require('./SyncTargetWebDAV');
+const JoplinServerApi = require('./JoplinServerApi.js').default;
 
 class SyncTargetNextcloud extends BaseSyncTarget {
 

@@ -1,8 +1,8 @@
 import ShareExtension, { SharedData } from './ShareExtension';
-import shim from 'inner/lib/shim';
+import shim from './shim';
 
-const Note = require('inner/lib/models/Note.js');
-const checkPermissions = require('inner/lib/checkPermissions.js').default;
+const Note = require('./models/Note.js');
+const checkPermissions = require('./checkPermissions.js').default;
 const { ToastAndroid } = require('react-native');
 const { PermissionsAndroid } = require('react-native');
 

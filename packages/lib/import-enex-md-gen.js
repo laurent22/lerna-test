@@ -1,6 +1,6 @@
 const stringPadding = require('string-padding');
 const stringToStream = require('string-to-stream');
-const resourceUtils = require('inner/lib/resourceUtils.js');
+const resourceUtils = require('./resourceUtils.js');
 
 const BLOCK_OPEN = '[[BLOCK_OPEN]]';
 const BLOCK_CLOSE = '[[BLOCK_CLOSE]]';

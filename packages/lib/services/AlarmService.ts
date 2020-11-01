@@ -1,7 +1,7 @@
-import Logger from 'inner/lib/Logger';
-import Alarm from 'inner/lib/models/Alarm';
+import Logger from '../Logger';
+import Alarm from '../models/Alarm';
 
-const Note = require('inner/lib/models/Note.js');
+const Note = require('../models/Note.js');
 
 export default class AlarmService {
 

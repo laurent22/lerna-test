@@ -1,5 +1,5 @@
 const stringPadding = require('string-padding');
-const urlUtils = require('inner/lib/urlUtils');
+const urlUtils = require('./urlUtils');
 const MarkdownIt = require('markdown-it');
 const { setupLinkify } = require('@joplin/renderer');
 

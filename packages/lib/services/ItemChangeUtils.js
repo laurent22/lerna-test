@@ -1,5 +1,5 @@
-const Setting = require('inner/lib/models/Setting').default;
-const ItemChange = require('inner/lib/models/ItemChange');
+const Setting = require('../models/Setting').default;
+const ItemChange = require('../models/ItemChange');
 
 class ItemChangeUtils {
 	static async deleteProcessedChanges() {

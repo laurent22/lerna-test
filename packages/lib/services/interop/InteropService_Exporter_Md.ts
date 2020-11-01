@@ -1,10 +1,10 @@
-const InteropService_Exporter_Base = require('inner/lib/services/interop/InteropService_Exporter_Base').default;
-const { basename, dirname, friendlySafeFilename } = require('inner/lib/path-utils');
-const BaseModel = require('inner/lib/BaseModel').default;
-const Folder = require('inner/lib/models/Folder');
-const Note = require('inner/lib/models/Note');
-const shim = require('inner/lib/shim').default;
-const markdownUtils = require('inner/lib/markdownUtils').default;
+const InteropService_Exporter_Base = require('./InteropService_Exporter_Base').default;
+const { basename, dirname, friendlySafeFilename } = require('../../path-utils');
+const BaseModel = require('../../BaseModel').default;
+const Folder = require('../../models/Folder');
+const Note = require('../../models/Note');
+const shim = require('../../shim').default;
+const markdownUtils = require('../../markdownUtils').default;
 
 export default class InteropService_Exporter_Md extends InteropService_Exporter_Base {
 	async init(destDir:string) {

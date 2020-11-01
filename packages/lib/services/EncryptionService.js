@@ -1,10 +1,10 @@
-const { padLeft } = require('inner/lib/string-utils.js');
-const Logger = require('inner/lib/Logger').default;
-const shim = require('inner/lib/shim').default;
-const Setting = require('inner/lib/models/Setting').default;
-const MasterKey = require('inner/lib/models/MasterKey');
-const BaseItem = require('inner/lib/models/BaseItem');
-const JoplinError = require('inner/lib/JoplinError');
+const { padLeft } = require('../string-utils.js');
+const Logger = require('../Logger').default;
+const shim = require('../shim').default;
+const Setting = require('../models/Setting').default;
+const MasterKey = require('../models/MasterKey');
+const BaseItem = require('../models/BaseItem');
+const JoplinError = require('../JoplinError');
 
 function hexPad(s, length) {
 	return padLeft(s, length, '0');

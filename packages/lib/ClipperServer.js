@@ -1,10 +1,10 @@
 const urlParser = require('url');
-const Setting = require('inner/lib/models/Setting').default;
-const Logger = require('inner/lib/Logger').default;
-const { randomClipperPort, startPort } = require('inner/lib/randomClipperPort');
+const Setting = require('./models/Setting').default;
+const Logger = require('./Logger').default;
+const { randomClipperPort, startPort } = require('./randomClipperPort');
 const enableServerDestroy = require('server-destroy');
-const Api = require('inner/lib/services/rest/Api').default;
-const ApiResponse = require('inner/lib/services/rest/ApiResponse').default;
+const Api = require('./services/rest/Api').default;
+const ApiResponse = require('./services/rest/ApiResponse').default;
 const multiparty = require('multiparty');
 
 class ClipperServer {

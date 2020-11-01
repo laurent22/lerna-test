@@ -1,10 +1,10 @@
-const BaseSyncTarget = require('inner/lib/BaseSyncTarget.js');
-const { _ } = require('inner/lib/locale');
-const Setting = require('inner/lib/models/Setting').default;
-const { FileApi } = require('inner/lib/file-api.js');
-const Synchronizer = require('inner/lib/Synchronizer').default;
-const WebDavApi = require('inner/lib/WebDavApi');
-const { FileApiDriverWebDav } = require('inner/lib/file-api-driver-webdav');
+const BaseSyncTarget = require('./BaseSyncTarget.js');
+const { _ } = require('./locale');
+const Setting = require('./models/Setting').default;
+const { FileApi } = require('./file-api.js');
+const Synchronizer = require('./Synchronizer').default;
+const WebDavApi = require('./WebDavApi');
+const { FileApiDriverWebDav } = require('./file-api-driver-webdav');
 
 class SyncTargetWebDAV extends BaseSyncTarget {
 	static id() {

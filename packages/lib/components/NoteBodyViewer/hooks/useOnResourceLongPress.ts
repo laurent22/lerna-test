@@ -1,12 +1,12 @@
 import { useCallback } from 'react';
-import Setting from 'inner/lib/models/Setting';
-import shim from 'inner/lib/shim';
+import Setting from '../../../models/Setting';
+import shim from '../../../shim';
 
 const { ToastAndroid } = require('react-native');
-const { _ } = require('inner/lib/locale.js');
-const { reg } = require('inner/lib/registry.js');
-const { dialogs } = require('inner/lib/dialogs.js');
-const Resource = require('inner/lib/models/Resource.js');
+const { _ } = require('../../../locale.js');
+const { reg } = require('../../../registry.js');
+const { dialogs } = require('../../../dialogs.js');
+const Resource = require('../../../models/Resource.js');
 const Share = require('react-native-share').default;
 
 export default function useOnResourceLongPress(onJoplinLinkClick:Function, dialogBoxRef:any) {

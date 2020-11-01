@@ -1,10 +1,10 @@
-import Plugin from 'inner/lib/services/plugins/Plugin';
-import manifestFromObject from 'inner/lib/services/plugins/utils/manifestFromObject';
-import Global from 'inner/lib/services/plugins/api/Global';
-import BasePluginRunner from 'inner/lib/services/plugins/BasePluginRunner';
+import Plugin from './Plugin';
+import manifestFromObject from './utils/manifestFromObject';
+import Global from './api/Global';
+import BasePluginRunner from './BasePluginRunner';
 import BaseService  from '../BaseService';
-import shim from 'inner/lib/shim';
-const { filename, dirname } = require('inner/lib/path-utils');
+import shim from '../../shim';
+const { filename, dirname } = require('../../path-utils');
 const uslug = require('uslug');
 
 interface Plugins {

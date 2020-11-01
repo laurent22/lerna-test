@@ -1,7 +1,7 @@
-import { stateUtils } from 'inner/lib/reducer';
+import { stateUtils } from '../../reducer';
 
-const BaseModel = require('inner/lib/BaseModel').default;
-const Folder = require('inner/lib/models/Folder');
+const BaseModel = require('../../BaseModel').default;
+const Folder = require('../../models/Folder');
 const MarkupToHtml = require('@joplin/renderer/MarkupToHtml').default;
 
 export default function stateToWhenClauseContext(state:any) {

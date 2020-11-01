@@ -1,5 +1,5 @@
-const SearchEngine = require('inner/lib/services/searchengine/SearchEngine');
-const Note = require('inner/lib/models/Note');
+const SearchEngine = require('./SearchEngine');
+const Note = require('../../models/Note');
 
 class SearchEngineUtils {
 	static async notesForQuery(query, options = null) {

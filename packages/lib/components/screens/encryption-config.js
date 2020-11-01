@@ -1,15 +1,15 @@
 const React = require('react');
 
 const { TextInput, TouchableOpacity, Linking, View, StyleSheet, Text, Button, ScrollView } = require('react-native');
-const EncryptionService = require('inner/lib/services/EncryptionService');
+const EncryptionService = require('../../services/EncryptionService');
 const { connect } = require('react-redux');
-const { ScreenHeader } = require('inner/lib/components/screen-header.js');
-const { _ } = require('inner/lib/locale');
-const { BaseScreenComponent } = require('inner/lib/components/base-screen.js');
-const { themeStyle } = require('inner/lib/components/global-style.js');
-const time = require('inner/lib/time').default;
-const shared = require('inner/lib/components/shared/encryption-config-shared.js');
-const { dialogs } = require('inner/lib/dialogs.js');
+const { ScreenHeader } = require('../screen-header.js');
+const { _ } = require('../../locale');
+const { BaseScreenComponent } = require('../base-screen.js');
+const { themeStyle } = require('../global-style.js');
+const time = require('../../time').default;
+const shared = require('../shared/encryption-config-shared.js');
+const { dialogs } = require('../../dialogs.js');
 const DialogBox = require('react-native-dialogbox').default;
 
 class EncryptionConfigScreenComponent extends BaseScreenComponent {

@@ -2,23 +2,23 @@ import Slider from '@react-native-community/slider';
 const React = require('react');
 const { Platform, TouchableOpacity, Linking, View, Switch, StyleSheet, Text, Button, ScrollView, TextInput, Alert, PermissionsAndroid } = require('react-native');
 const { connect } = require('react-redux');
-const { ScreenHeader } = require('inner/lib/components/screen-header.js');
-const { _ } = require('inner/lib/locale');
-const { BaseScreenComponent } = require('inner/lib/components/base-screen.js');
-const { Dropdown } = require('inner/lib/components/Dropdown.js');
-const { themeStyle } = require('inner/lib/components/global-style.js');
-const Setting = require('inner/lib/models/Setting').default;
-const shared = require('inner/lib/components/shared/config-shared.js');
-const SyncTargetRegistry = require('inner/lib/SyncTargetRegistry');
-const { reg } = require('inner/lib/registry.js');
-const NavService = require('inner/lib/services/NavService.js');
+const { ScreenHeader } = require('../screen-header.js');
+const { _ } = require('../../locale');
+const { BaseScreenComponent } = require('../base-screen.js');
+const { Dropdown } = require('../Dropdown.js');
+const { themeStyle } = require('../global-style.js');
+const Setting = require('../../models/Setting').default;
+const shared = require('../shared/config-shared.js');
+const SyncTargetRegistry = require('../../SyncTargetRegistry');
+const { reg } = require('../../registry.js');
+const NavService = require('../../services/NavService.js');
 const VersionInfo = require('react-native-version-info').default;
-const { ReportService } = require('inner/lib/services/report.js');
-const time = require('inner/lib/time').default;
-const shim = require('inner/lib/shim').default;
-const SearchEngine = require('inner/lib/services/searchengine/SearchEngine');
+const { ReportService } = require('../../services/report.js');
+const time = require('../../time').default;
+const shim = require('../../shim').default;
+const SearchEngine = require('../../services/searchengine/SearchEngine');
 const RNFS = require('react-native-fs');
-const checkPermissions = require('inner/lib/checkPermissions.js').default;
+const checkPermissions = require('../../checkPermissions.js').default;
 
 class ConfigScreenComponent extends BaseScreenComponent {
 	static navigationOptions() {

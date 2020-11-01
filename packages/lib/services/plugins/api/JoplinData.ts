@@ -1,4 +1,4 @@
-import Api from 'inner/lib/services/rest/Api';
+import Api from '../../rest/Api';
 import { Path } from './types';
 
 /**

@@ -1,5 +1,5 @@
-const EncryptionService = require('inner/lib/services/EncryptionService.js');
-const shim = require('inner/lib/shim').default;
+const EncryptionService = require('./services/EncryptionService.js');
+const shim = require('./shim').default;
 
 class BaseSyncTarget {
 	constructor(db, options = null) {

@@ -1,4 +1,4 @@
-import shim from 'inner/lib/shim';
+import shim from './shim';
 
 export interface QueueItemAction {
 	(): void,

@@ -1,6 +1,6 @@
 import { useRef, useMemo, useCallback } from 'react';
 
-import Setting from 'inner/lib/models/Setting';
+import Setting from '../../models/Setting';
 import useSource from './hooks/useSource';
 import useOnMessage from './hooks/useOnMessage';
 import useOnResourceLongPress from './hooks/useOnResourceLongPress';
@@ -8,9 +8,9 @@ import useOnResourceLongPress from './hooks/useOnResourceLongPress';
 const React = require('react');
 const { View } = require('react-native');
 const { WebView } = require('react-native-webview');
-const { themeStyle } = require('inner/lib/components/global-style.js');
-const BackButtonDialogBox = require('inner/lib/components/BackButtonDialogBox').default;
-const { reg } = require('inner/lib/registry.js');
+const { themeStyle } = require('../global-style.js');
+const BackButtonDialogBox = require('../BackButtonDialogBox').default;
+const { reg } = require('../../registry.js');
 
 interface Props {
 	themeId: number,

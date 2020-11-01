@@ -1,8 +1,8 @@
-import shim from 'inner/lib/shim';
-import { _ } from 'inner/lib/locale';
-const Logger = require('inner/lib/Logger').default;
-const JoplinError = require('inner/lib/JoplinError');
-const { rtrimSlashes } = require('inner/lib/path-utils');
+import shim from './shim';
+import { _ } from './locale';
+const Logger = require('./Logger').default;
+const JoplinError = require('./JoplinError');
+const { rtrimSlashes } = require('./path-utils');
 const base64 = require('base-64');
 
 interface JoplinServerApiOptions {

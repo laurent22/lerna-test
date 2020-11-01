@@ -1,12 +1,12 @@
 const welcomeAssets = require('./welcomeAssets');
-const Note = require('inner/lib/models/Note');
-const Setting = require('inner/lib/models/Setting').default;
-const Folder = require('inner/lib/models/Folder');
-const Tag = require('inner/lib/models/Tag');
-const shim = require('inner/lib/shim').default;
-const uuid = require('inner/lib/uuid').default;
-const { fileExtension, basename } = require('inner/lib/path-utils');
-const { pregQuote } = require('inner/lib/string-utils');
+const Note = require('./models/Note');
+const Setting = require('./models/Setting').default;
+const Folder = require('./models/Folder');
+const Tag = require('./models/Tag');
+const shim = require('./shim').default;
+const uuid = require('./uuid').default;
+const { fileExtension, basename } = require('./path-utils');
+const { pregQuote } = require('./string-utils');
 
 class WelcomeUtils {
 	static async createWelcomeItems() {

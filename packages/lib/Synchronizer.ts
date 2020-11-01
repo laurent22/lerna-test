@@ -1,24 +1,24 @@
 import Logger from './Logger';
-import LockHandler, { LockType } from 'inner/lib/services/synchronizer/LockHandler';
-import Setting from 'inner/lib/models/Setting';
-import shim from 'inner/lib/shim';
-import MigrationHandler from 'inner/lib/services/synchronizer/MigrationHandler';
-import eventManager from 'inner/lib/eventManager';
-import { _ } from 'inner/lib/locale';
+import LockHandler, { LockType } from './services/synchronizer/LockHandler';
+import Setting from './models/Setting';
+import shim from './shim';
+import MigrationHandler from './services/synchronizer/MigrationHandler';
+import eventManager from './eventManager';
+import { _ } from './locale';
 
-const BaseItem = require('inner/lib/models/BaseItem.js');
-const Folder = require('inner/lib/models/Folder.js');
-const Note = require('inner/lib/models/Note.js');
-const Resource = require('inner/lib/models/Resource.js');
-const ItemChange = require('inner/lib/models/ItemChange.js');
-const ResourceLocalState = require('inner/lib/models/ResourceLocalState.js');
-const MasterKey = require('inner/lib/models/MasterKey.js');
-const BaseModel = require('inner/lib/BaseModel').default;
+const BaseItem = require('./models/BaseItem.js');
+const Folder = require('./models/Folder.js');
+const Note = require('./models/Note.js');
+const Resource = require('./models/Resource.js');
+const ItemChange = require('./models/ItemChange.js');
+const ResourceLocalState = require('./models/ResourceLocalState.js');
+const MasterKey = require('./models/MasterKey.js');
+const BaseModel = require('./BaseModel').default;
 const { sprintf } = require('sprintf-js');
-const time = require('inner/lib/time').default;
-const JoplinError = require('inner/lib/JoplinError');
-const TaskQueue = require('inner/lib/TaskQueue');
-const { Dirnames } = require('inner/lib/services/synchronizer/utils/types');
+const time = require('./time').default;
+const JoplinError = require('./JoplinError');
+const TaskQueue = require('./TaskQueue');
+const { Dirnames } = require('./services/synchronizer/utils/types');
 
 interface RemoteItem {
 	id: string,

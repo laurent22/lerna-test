@@ -1,5 +1,5 @@
-const BaseItem = require('inner/lib/models/BaseItem.js');
-const BaseModel = require('inner/lib/BaseModel').default;
+const BaseItem = require('./BaseItem.js');
+const BaseModel = require('../BaseModel').default;
 
 class NoteTag extends BaseItem {
 	static tableName() {

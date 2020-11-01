@@ -1,4 +1,4 @@
-import CommandService, { CommandContext, CommandDeclaration, CommandRuntime } from 'inner/lib/services/CommandService';
+import CommandService, { CommandContext, CommandDeclaration, CommandRuntime } from '../../CommandService';
 import { Command } from './types';
 
 /**

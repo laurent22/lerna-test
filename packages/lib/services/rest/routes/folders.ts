@@ -2,10 +2,10 @@
 import { Request } from '../Api';
 import defaultAction from '../utils/defaultAction';
 import paginatedResults from '../utils/paginatedResults';
-import BaseModel from 'inner/lib/BaseModel';
+import BaseModel from '../../../BaseModel';
 import requestFields from '../utils/requestFields';
-const Folder = require('inner/lib/models/Folder');
-const { FoldersScreenUtils } = require('inner/lib/folders-screen-utils.js');
+const Folder = require('../../../models/Folder');
+const { FoldersScreenUtils } = require('../../../folders-screen-utils.js');
 const { ErrorNotFound } = require('../errors');
 
 export default async function(request:Request, id:string = null, link:string = null) {

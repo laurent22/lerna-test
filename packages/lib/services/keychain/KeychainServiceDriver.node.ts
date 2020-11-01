@@ -1,5 +1,5 @@
 import KeychainServiceDriverBase from './KeychainServiceDriverBase';
-import shim from 'inner/lib/shim';
+import shim from '../../shim';
 
 // keytar throws an error when system keychain is not present;
 // even when keytar itself is installed.

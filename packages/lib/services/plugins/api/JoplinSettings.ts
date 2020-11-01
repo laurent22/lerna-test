@@ -1,4 +1,4 @@
-import Setting, { SettingItem as InternalSettingItem } from 'inner/lib/models/Setting';
+import Setting, { SettingItem as InternalSettingItem } from '../../../models/Setting';
 import Plugin from '../Plugin';
 import { SettingItem, SettingSection } from './types';
 

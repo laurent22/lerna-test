@@ -1,21 +1,21 @@
 const React = require('react');
 
 const { AppState, View, StyleSheet } = require('react-native');
-const { stateUtils } = require('inner/lib/reducer');
+const { stateUtils } = require('../../reducer');
 const { connect } = require('react-redux');
-const { NoteList } = require('inner/lib/components/note-list.js');
-const Folder = require('inner/lib/models/Folder.js');
-const Tag = require('inner/lib/models/Tag.js');
-const Note = require('inner/lib/models/Note.js');
-const Setting = require('inner/lib/models/Setting').default;
-const { themeStyle } = require('inner/lib/components/global-style.js');
-const { ScreenHeader } = require('inner/lib/components/screen-header.js');
-const { _ } = require('inner/lib/locale');
-const { ActionButton } = require('inner/lib/components/action-button.js');
-const { dialogs } = require('inner/lib/dialogs.js');
+const { NoteList } = require('../note-list.js');
+const Folder = require('../../models/Folder.js');
+const Tag = require('../../models/Tag.js');
+const Note = require('../../models/Note.js');
+const Setting = require('../../models/Setting').default;
+const { themeStyle } = require('../global-style.js');
+const { ScreenHeader } = require('../screen-header.js');
+const { _ } = require('../../locale');
+const { ActionButton } = require('../action-button.js');
+const { dialogs } = require('../../dialogs.js');
 const DialogBox = require('react-native-dialogbox').default;
-const { BaseScreenComponent } = require('inner/lib/components/base-screen.js');
-const { BackButtonService } = require('inner/lib/services/back-button.js');
+const { BaseScreenComponent } = require('../base-screen.js');
+const { BackButtonService } = require('../../services/back-button.js');
 
 class NotesScreenComponent extends BaseScreenComponent {
 	static navigationOptions() {

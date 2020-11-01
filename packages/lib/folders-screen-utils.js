@@ -1,6 +1,6 @@
-const Folder = require('inner/lib/models/Folder.js');
-const Setting = require('inner/lib/models/Setting').default;
-const shim = require('inner/lib/shim').default;
+const Folder = require('./models/Folder.js');
+const Setting = require('./models/Setting').default;
+const shim = require('./shim').default;
 
 class FoldersScreenUtils {
 	static async allForDisplay(options = {}) {

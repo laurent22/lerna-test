@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import MigrationHandler from 'inner/lib/services/synchronizer/MigrationHandler';
-const Setting = require('inner/lib/models/Setting').default;
-const { reg } = require('inner/lib/registry');
+import MigrationHandler from '../MigrationHandler';
+const Setting = require('../../../models/Setting').default;
+const { reg } = require('../../../registry');
 
 export interface SyncTargetUpgradeResult {
 	done: boolean,

@@ -1,9 +1,9 @@
 import AsyncActionQueue from '../../AsyncActionQueue';
-import shim from 'inner/lib/shim';
-import { _ } from 'inner/lib/locale';
-const Logger = require('inner/lib/Logger').default;
-const Setting = require('inner/lib/models/Setting').default;
-const Resource = require('inner/lib/models/Resource');
+import shim from '../../shim';
+import { _ } from '../../locale';
+const Logger = require('../../Logger').default;
+const Setting = require('../../models/Setting').default;
+const Resource = require('../../models/Resource');
 const EventEmitter = require('events');
 const chokidar = require('chokidar');
 const bridge = require('electron').remote.require('./bridge').default;

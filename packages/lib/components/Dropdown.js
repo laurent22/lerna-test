@@ -1,6 +1,6 @@
 const React = require('react');
 const { TouchableOpacity, TouchableWithoutFeedback, Dimensions, Text, Modal, View } = require('react-native');
-const { ItemList } = require('inner/lib/components/ItemList.js');
+const { ItemList } = require('./ItemList.js');
 
 class Dropdown extends React.Component {
 	constructor() {

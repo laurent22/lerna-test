@@ -1,4 +1,4 @@
-import { _ } from 'inner/lib/locale';
+import { _ } from '../../locale';
 
 export interface CustomImportContext {
 	sourcePath: string,

@@ -1,4 +1,4 @@
-import uuid from 'inner/lib/uuid';
+import uuid from '../../../uuid';
 import Plugin from '../Plugin';
 
 export type ViewHandle = string;

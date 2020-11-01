@@ -17,10 +17,10 @@
 		"jsx": "react",
 		"skipLibCheck": true,
 		"allowUmdGlobalAccess": true,
-		"baseUrl": ".",
-		"paths": {
-			"inner/lib/*": ["../lib/*"],
-		},
+		// "baseUrl": ".",
+		// "paths": {
+		// 	"inner/lib/*": ["../lib/*"],
+		// },
 	},
     "include": [
         "**/*.ts",

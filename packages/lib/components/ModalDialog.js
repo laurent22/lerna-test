@@ -1,7 +1,7 @@
 const React = require('react');
 const { Text, Modal, View, StyleSheet, Button } = require('react-native');
-const { themeStyle } = require('inner/lib/components/global-style.js');
-const { _ } = require('inner/lib/locale');
+const { themeStyle } = require('./global-style.js');
+const { _ } = require('../locale');
 
 class ModalDialog extends React.Component {
 	constructor() {

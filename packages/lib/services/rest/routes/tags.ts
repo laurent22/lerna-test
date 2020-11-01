@@ -1,9 +1,9 @@
 import defaultAction from '../utils/defaultAction';
-import BaseModel, { ModelType } from 'inner/lib/BaseModel';
+import BaseModel, { ModelType } from '../../../BaseModel';
 import defaultLoadOptions from '../utils/defaultLoadOptions';
 import { Request, RequestMethod } from '../Api';
-const Note = require('inner/lib/models/Note');
-const Tag = require('inner/lib/models/Tag');
+const Note = require('../../../models/Note');
+const Tag = require('../../../models/Tag');
 const { ErrorBadRequest, ErrorNotFound } = require('../errors');
 
 export default async function(request:Request, id:string = null, link:string = null) {

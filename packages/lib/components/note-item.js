@@ -2,10 +2,10 @@ const React = require('react');
 const Component = React.Component;
 const { connect } = require('react-redux');
 const { Text, TouchableOpacity, View, StyleSheet } = require('react-native');
-const { Checkbox } = require('inner/lib/components/checkbox.js');
-const Note = require('inner/lib/models/Note.js');
-const time = require('inner/lib/time').default;
-const { themeStyle } = require('inner/lib/components/global-style.js');
+const { Checkbox } = require('./checkbox.js');
+const Note = require('../models/Note.js');
+const time = require('../time').default;
+const { themeStyle } = require('./global-style.js');
 
 class NoteItemComponent extends Component {
 	constructor() {

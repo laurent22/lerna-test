@@ -1,5 +1,5 @@
-const { rtrimSlashes } = require('inner/lib/path-utils');
-const { urlDecode } = require('inner/lib/string-utils');
+const { rtrimSlashes } = require('./path-utils');
+const { urlDecode } = require('./string-utils');
 
 const urlUtils = {};
 

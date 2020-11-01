@@ -1,9 +1,9 @@
-import eventManager from 'inner/lib/eventManager';
+import eventManager from '../../../eventManager';
 
 /**
  * @ignore
  */
-const Note = require('inner/lib/models/Note');
+const Note = require('../../../models/Note');
 
 /**
  * The workspace service provides access to all the parts of Joplin that are being worked on - i.e. the currently selected notes or notebooks as well

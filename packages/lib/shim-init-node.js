@@ -1,14 +1,14 @@
 const fs = require('fs-extra');
-const shim = require('inner/lib/shim').default;
-const { GeolocationNode } = require('inner/lib/geolocation-node.js');
-const { FileApiDriverLocal } = require('inner/lib/file-api-driver-local.js');
-const { setLocale, defaultLocale, closestSupportedLocale } = require('inner/lib/locale');
-const FsDriverNode = require('inner/lib/fs-driver-node').default;
-const mimeUtils = require('inner/lib/mime-utils.js').mime;
-const Note = require('inner/lib/models/Note.js');
-const Resource = require('inner/lib/models/Resource.js');
+const shim = require('./shim').default;
+const { GeolocationNode } = require('./geolocation-node.js');
+const { FileApiDriverLocal } = require('./file-api-driver-local.js');
+const { setLocale, defaultLocale, closestSupportedLocale } = require('./locale');
+const FsDriverNode = require('./fs-driver-node').default;
+const mimeUtils = require('./mime-utils.js').mime;
+const Note = require('./models/Note.js');
+const Resource = require('./models/Resource.js');
 const urlValidator = require('valid-url');
-const { _ } = require('inner/lib/locale');
+const { _ } = require('./locale');
 const http = require('http');
 const https = require('https');
 const toRelative = require('relative');
@@ -58,7 +58,7 @@ function shimInit() {
 	shim.FileApiDriverLocal = FileApiDriverLocal;
 	shim.Geolocation = GeolocationNode;
 	shim.FormData = require('form-data');
-	shim.sjclModule = require('lib/vendor/sjcl.js');
+	shim.sjclModule = require('./vendor/sjcl.js');
 
 	shim.fsDriver = () => {
 		if (!shim.fsDriver_) shim.fsDriver_ = new FsDriverNode();
@@ -189,8 +189,8 @@ function shimInit() {
 		const readChunk = require('read-chunk');
 		const imageType = require('image-type');
 
-		const uuid = require('inner/lib/uuid').default;
-		const { basename, fileExtension, safeFileExtension } = require('inner/lib/path-utils');
+		const uuid = require('./uuid').default;
+		const { basename, fileExtension, safeFileExtension } = require('./path-utils');
 
 		if (!(await fs.pathExists(filePath))) throw new Error(_('Cannot access %s', filePath));
 
@@ -250,8 +250,8 @@ function shimInit() {
 		}, options);
 
 		const { basename } = require('path');
-		const { escapeTitleText } = require('inner/lib/markdownUtils').default;
-		const { toFileProtocolPath } = require('inner/lib/path-utils');
+		const { escapeTitleText } = require('./markdownUtils').default;
+		const { toFileProtocolPath } = require('./path-utils');
 
 		let resource = null;
 		if (!options.createFileURL) {

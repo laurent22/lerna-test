@@ -1,4 +1,4 @@
-const BaseItem = require('inner/lib/models/BaseItem');
+const BaseItem = require('../models/BaseItem');
 
 class ModelCache {
 	constructor() {

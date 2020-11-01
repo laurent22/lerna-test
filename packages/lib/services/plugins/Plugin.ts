@@ -1,9 +1,9 @@
 import { PluginManifest } from './utils/types';
 import ViewController from './ViewController';
-import shim from 'inner/lib/shim';
+import shim from '../../shim';
 import { ViewHandle } from './utils/createViewHandle';
 import { ContentScriptType } from './api/types';
-import Logger from 'inner/lib/Logger';
+import Logger from '../../Logger';
 const EventEmitter = require('events');
 
 interface ViewControllers {

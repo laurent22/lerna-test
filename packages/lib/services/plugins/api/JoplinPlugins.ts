@@ -1,5 +1,5 @@
 import Plugin from '../Plugin';
-import Logger from 'inner/lib/Logger';
+import Logger from '../../../Logger';
 import { ContentScriptType, Script } from './types';
 
 /**

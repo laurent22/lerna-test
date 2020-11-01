@@ -4,9 +4,9 @@ const Component = React.Component;
 const { connect } = require('react-redux');
 const { View, TouchableOpacity, Text, Dimensions } = require('react-native');
 const Icon = require('react-native-vector-icons/Ionicons').default;
-const { _ } = require('inner/lib/locale');
-const shim = require('inner/lib/shim').default;
-const Setting = require('inner/lib/models/Setting').default;
+const { _ } = require('../locale');
+const shim = require('../shim').default;
+const Setting = require('../models/Setting').default;
 
 Icon.loadFont();
 

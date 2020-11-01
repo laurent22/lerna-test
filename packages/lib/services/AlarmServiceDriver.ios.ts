@@ -1,5 +1,5 @@
-import { Notification } from 'inner/lib/models/Alarm';
-import Logger from 'inner/lib/Logger';
+import { Notification } from '../models/Alarm';
+import Logger from '../Logger';
 const PushNotificationIOS  = require('@react-native-community/push-notification-ios').default;
 
 export default class AlarmServiceDriver {

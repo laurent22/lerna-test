@@ -1,11 +1,11 @@
-const Resource = require('inner/lib/models/Resource');
-const Setting = require('inner/lib/models/Setting').default;
-const BaseService = require('inner/lib/services/BaseService').default;
-const ResourceService = require('inner/lib/services/ResourceService');
-const { Dirnames } = require('inner/lib/services/synchronizer/utils/types');
-const Logger = require('inner/lib/Logger').default;
+const Resource = require('../models/Resource');
+const Setting = require('../models/Setting').default;
+const BaseService = require('./BaseService').default;
+const ResourceService = require('./ResourceService');
+const { Dirnames } = require('./synchronizer/utils/types');
+const Logger = require('../Logger').default;
 const EventEmitter = require('events');
-const shim = require('inner/lib/shim').default;
+const shim = require('../shim').default;
 
 class ResourceFetcher extends BaseService {
 	constructor(fileApi = null) {

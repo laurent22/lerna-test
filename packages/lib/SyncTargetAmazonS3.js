@@ -1,9 +1,9 @@
-const BaseSyncTarget = require('inner/lib/BaseSyncTarget.js');
-const { _ } = require('inner/lib/locale');
-const Setting = require('inner/lib/models/Setting').default;
-const { FileApi } = require('inner/lib/file-api.js');
-const Synchronizer = require('inner/lib/Synchronizer').default;
-const { FileApiDriverAmazonS3 } = require('inner/lib/file-api-driver-amazon-s3.js');
+const BaseSyncTarget = require('./BaseSyncTarget.js');
+const { _ } = require('./locale');
+const Setting = require('./models/Setting').default;
+const { FileApi } = require('./file-api.js');
+const Synchronizer = require('./Synchronizer').default;
+const { FileApiDriverAmazonS3 } = require('./file-api-driver-amazon-s3.js');
 const S3 = require('aws-sdk/clients/s3');
 
 class SyncTargetAmazonS3 extends BaseSyncTarget {

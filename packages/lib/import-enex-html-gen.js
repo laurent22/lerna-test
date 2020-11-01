@@ -1,7 +1,7 @@
 const stringToStream = require('string-to-stream');
 // const cleanHtml = require('clean-html');
-const resourceUtils = require('inner/lib/resourceUtils.js');
-const { isSelfClosingTag } = require('inner/lib/htmlUtils');
+const resourceUtils = require('./resourceUtils.js');
+const { isSelfClosingTag } = require('./htmlUtils');
 const Entities = require('html-entities').AllHtmlEntities;
 const htmlentities = new Entities().encode;
 

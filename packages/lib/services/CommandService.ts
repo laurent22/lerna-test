@@ -1,7 +1,7 @@
-import { State } from 'inner/lib/reducer';
-import eventManager from 'inner/lib/eventManager';
-import BaseService from 'inner/lib/services/BaseService';
-import shim from 'inner/lib/shim';
+import { State } from '../reducer';
+import eventManager from '../eventManager';
+import BaseService from './BaseService';
+import shim from '../shim';
 import WhenClause from './WhenClause';
 import stateToWhenClauseContext from './commands/stateToWhenClauseContext';
 

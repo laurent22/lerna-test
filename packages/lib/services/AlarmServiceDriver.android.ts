@@ -1,5 +1,5 @@
-import Logger from 'inner/lib/Logger';
-import { Notification } from 'inner/lib/models/Alarm';
+import Logger from '../Logger';
+import { Notification } from '../models/Alarm';
 
 const ReactNativeAN = require('react-native-alarm-notification').default;
 

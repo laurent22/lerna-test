@@ -1,6 +1,6 @@
-const time = require('inner/lib/time').default;
-const shim = require('inner/lib/shim').default;
-const JoplinError = require('inner/lib/JoplinError');
+const time = require('./time').default;
+const shim = require('./shim').default;
+const JoplinError = require('./JoplinError');
 
 class FileApiDriverDropbox {
 	constructor(api) {

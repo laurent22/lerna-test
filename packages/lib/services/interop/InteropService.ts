@@ -1,18 +1,18 @@
 import { ModuleType, FileSystemItem, ImportModuleOutputFormat, Module, ImportOptions, ExportOptions, ImportExportResult, defaultImportExportModule } from './types';
 import InteropService_Importer_Custom from './InteropService_Importer_Custom';
 import InteropService_Exporter_Custom from './InteropService_Exporter_Custom';
-import shim from 'inner/lib/shim';
-import { _ } from 'inner/lib/locale';
-const BaseItem = require('inner/lib/models/BaseItem.js');
-const BaseModel = require('inner/lib/BaseModel').default;
-const Resource = require('inner/lib/models/Resource.js');
-const Folder = require('inner/lib/models/Folder.js');
-const NoteTag = require('inner/lib/models/NoteTag.js');
-const Note = require('inner/lib/models/Note.js');
-const ArrayUtils = require('inner/lib/ArrayUtils');
+import shim from '../../shim';
+import { _ } from '../../locale';
+const BaseItem = require('../../models/BaseItem.js');
+const BaseModel = require('../../BaseModel').default;
+const Resource = require('../../models/Resource.js');
+const Folder = require('../../models/Folder.js');
+const NoteTag = require('../../models/NoteTag.js');
+const Note = require('../../models/Note.js');
+const ArrayUtils = require('../../ArrayUtils');
 const { sprintf } = require('sprintf-js');
-const { fileExtension } = require('inner/lib/path-utils');
-const { toTitleCase } = require('inner/lib/string-utils');
+const { fileExtension } = require('../../path-utils');
+const { toTitleCase } = require('../../string-utils');
 const EventEmitter = require('events');
 
 export default class InteropService {

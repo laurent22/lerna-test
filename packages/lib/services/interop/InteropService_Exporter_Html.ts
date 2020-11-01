@@ -1,14 +1,14 @@
-const InteropService_Exporter_Base = require('inner/lib/services/interop/InteropService_Exporter_Base').default;
-const { basename, friendlySafeFilename, rtrimSlashes } = require('inner/lib/path-utils');
-const BaseModel = require('inner/lib/BaseModel').default;
-const Folder = require('inner/lib/models/Folder');
-const Note = require('inner/lib/models/Note');
-const Setting = require('inner/lib/models/Setting').default;
-const shim = require('inner/lib/shim').default;
-const { themeStyle } = require('inner/lib/theme');
-const { dirname } = require('inner/lib/path-utils');
-const { escapeHtml } = require('inner/lib/string-utils.js');
-const markupLanguageUtils = require('inner/lib/markupLanguageUtils').default;
+const InteropService_Exporter_Base = require('./InteropService_Exporter_Base').default;
+const { basename, friendlySafeFilename, rtrimSlashes } = require('../../path-utils');
+const BaseModel = require('../../BaseModel').default;
+const Folder = require('../../models/Folder');
+const Note = require('../../models/Note');
+const Setting = require('../../models/Setting').default;
+const shim = require('../../shim').default;
+const { themeStyle } = require('../../theme');
+const { dirname } = require('../../path-utils');
+const { escapeHtml } = require('../../string-utils.js');
+const markupLanguageUtils = require('../../markupLanguageUtils').default;
 const { assetsToHeaders } = require('@joplin/renderer');
 
 export default class InteropService_Exporter_Html extends InteropService_Exporter_Base {

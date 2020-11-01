@@ -19,6 +19,7 @@
     "typescript": "3.9.6"
   },
   "dependencies": {
+    "@joplin/lib": "^0.0.0",
     "base-64": "^0.1.0",
     "font-awesome-filetypes": "^2.1.0",
     "fs-extra": "^8.1.0",

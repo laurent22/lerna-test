@@ -1,5 +1,5 @@
-import InteropService from 'inner/lib/services/interop/InteropService';
-import { Module, ModuleType } from 'inner/lib/services/interop/types';
+import InteropService from '../../interop/InteropService';
+import { Module, ModuleType } from '../../interop/types';
 import { ExportModule, ImportModule } from './types';
 
 /**

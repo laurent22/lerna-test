@@ -1,6 +1,6 @@
-import eventManager from 'inner/lib/eventManager';
-import { Notification } from 'inner/lib/models/Alarm';
-import shim from 'inner/lib/shim';
+import eventManager from '../eventManager';
+import { Notification } from '../models/Alarm';
+import shim from '../shim';
 
 const notifier = require('node-notifier');
 const bridge = require('electron').remote.require('./bridge').default;

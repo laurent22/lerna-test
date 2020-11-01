@@ -2,11 +2,11 @@ const React = require('react');
 
 const { View, Text, FlatList, StyleSheet, TouchableOpacity } = require('react-native');
 const { connect } = require('react-redux');
-const Tag = require('inner/lib/models/Tag.js');
-const { themeStyle } = require('inner/lib/components/global-style.js');
-const { ScreenHeader } = require('inner/lib/components/screen-header.js');
-const { _ } = require('inner/lib/locale');
-const { BaseScreenComponent } = require('inner/lib/components/base-screen.js');
+const Tag = require('../../models/Tag.js');
+const { themeStyle } = require('../global-style.js');
+const { ScreenHeader } = require('../screen-header.js');
+const { _ } = require('../../locale');
+const { BaseScreenComponent } = require('../base-screen.js');
 
 class TagsScreenComponent extends BaseScreenComponent {
 	static navigationOptions() {

@@ -2,16 +2,16 @@ const React = require('react');
 
 const { StyleSheet, View, TextInput, FlatList, TouchableHighlight } = require('react-native');
 const { connect } = require('react-redux');
-const { ScreenHeader } = require('inner/lib/components/screen-header.js');
+const { ScreenHeader } = require('../screen-header.js');
 const Icon = require('react-native-vector-icons/Ionicons').default;
-const { _ } = require('inner/lib/locale');
-const Note = require('inner/lib/models/Note.js');
-const { NoteItem } = require('inner/lib/components/note-item.js');
-const { BaseScreenComponent } = require('inner/lib/components/base-screen.js');
-const { themeStyle } = require('inner/lib/components/global-style.js');
+const { _ } = require('../../locale');
+const Note = require('../../models/Note.js');
+const { NoteItem } = require('../note-item.js');
+const { BaseScreenComponent } = require('../base-screen.js');
+const { themeStyle } = require('../global-style.js');
 const DialogBox = require('react-native-dialogbox').default;
-const SearchEngineUtils = require('inner/lib/services/searchengine/SearchEngineUtils');
-const SearchEngine = require('inner/lib/services/searchengine/SearchEngine');
+const SearchEngineUtils = require('../../services/searchengine/SearchEngineUtils');
+const SearchEngine = require('../../services/searchengine/SearchEngine');
 
 Icon.loadFont();
 

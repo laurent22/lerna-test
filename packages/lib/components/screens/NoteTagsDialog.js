@@ -2,11 +2,11 @@ const React = require('react');
 
 const { StyleSheet, View, Text, FlatList, TouchableOpacity, TextInput } = require('react-native');
 const { connect } = require('react-redux');
-const Tag = require('inner/lib/models/Tag.js');
-const { _ } = require('inner/lib/locale');
-const { themeStyle } = require('inner/lib/components/global-style.js');
+const Tag = require('../../models/Tag.js');
+const { _ } = require('../../locale');
+const { themeStyle } = require('../global-style.js');
 const Icon = require('react-native-vector-icons/Ionicons').default;
-const ModalDialog = require('inner/lib/components/ModalDialog');
+const ModalDialog = require('../ModalDialog');
 const naturalCompare = require('string-natural-compare');
 
 Icon.loadFont();

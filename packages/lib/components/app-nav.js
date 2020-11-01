@@ -1,10 +1,10 @@
 const React = require('react');
 const Component = React.Component;
 const { connect } = require('react-redux');
-const { NotesScreen } = require('inner/lib/components/screens/notes.js');
-const { SearchScreen } = require('inner/lib/components/screens/search.js');
+const { NotesScreen } = require('./screens/notes.js');
+const { SearchScreen } = require('./screens/search.js');
 const { KeyboardAvoidingView, Keyboard, Platform, View } = require('react-native');
-const { themeStyle } = require('inner/lib/components/global-style.js');
+const { themeStyle } = require('./global-style.js');
 
 class AppNavComponent extends Component {
 	constructor() {

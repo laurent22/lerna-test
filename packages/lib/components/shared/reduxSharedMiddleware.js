@@ -1,11 +1,11 @@
-const Setting = require('inner/lib/models/Setting').default;
-const Tag = require('inner/lib/models/Tag');
-const BaseModel = require('inner/lib/BaseModel').default;
-const Note = require('inner/lib/models/Note');
-const { reg } = require('inner/lib/registry.js');
-const ResourceFetcher = require('inner/lib/services/ResourceFetcher');
-const DecryptionWorker = require('inner/lib/services/DecryptionWorker');
-const eventManager = require('inner/lib/eventManager').default;
+const Setting = require('../../models/Setting').default;
+const Tag = require('../../models/Tag');
+const BaseModel = require('../../BaseModel').default;
+const Note = require('../../models/Note');
+const { reg } = require('../../registry.js');
+const ResourceFetcher = require('../../services/ResourceFetcher');
+const DecryptionWorker = require('../../services/DecryptionWorker');
+const eventManager = require('../../eventManager').default;
 
 const reduxSharedMiddleware = async function(store, next, action) {
 	const newState = store.getState();

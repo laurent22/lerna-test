@@ -1,6 +1,6 @@
-const Folder = require('inner/lib/models/Folder');
-const Note = require('inner/lib/models/Note');
-const Tag = require('inner/lib/models/Tag');
+const Folder = require('../../models/Folder');
+const Note = require('../../models/Note');
+const Tag = require('../../models/Tag');
 
 function randomIndex(array:any[]):number {
 	return Math.round(Math.random() * (array.length - 1));

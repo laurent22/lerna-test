@@ -1,4 +1,4 @@
-import shim from 'inner/lib/shim';
+import shim from './shim';
 const moment = require('moment');
 
 class Time {

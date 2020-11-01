@@ -1,16 +1,16 @@
-const BaseModel = require('inner/lib/BaseModel').default;
-const BaseItem = require('inner/lib/models/BaseItem.js');
-const ItemChange = require('inner/lib/models/ItemChange.js');
-const NoteResource = require('inner/lib/models/NoteResource.js');
-const ResourceLocalState = require('inner/lib/models/ResourceLocalState.js');
-const Setting = require('inner/lib/models/Setting').default;
-const pathUtils = require('inner/lib/path-utils');
-const { mime } = require('inner/lib/mime-utils.js');
-const { filename, safeFilename } = require('inner/lib/path-utils');
-const { FsDriverDummy } = require('inner/lib/fs-driver-dummy.js');
-const markdownUtils = require('inner/lib/markdownUtils').default;
-const JoplinError = require('inner/lib/JoplinError');
-const { _ } = require('inner/lib/locale');
+const BaseModel = require('../BaseModel').default;
+const BaseItem = require('./BaseItem.js');
+const ItemChange = require('./ItemChange.js');
+const NoteResource = require('./NoteResource.js');
+const ResourceLocalState = require('./ResourceLocalState.js');
+const Setting = require('./Setting').default;
+const pathUtils = require('../path-utils');
+const { mime } = require('../mime-utils.js');
+const { filename, safeFilename } = require('../path-utils');
+const { FsDriverDummy } = require('../fs-driver-dummy.js');
+const markdownUtils = require('../markdownUtils').default;
+const JoplinError = require('../JoplinError');
+const { _ } = require('../locale');
 
 class Resource extends BaseItem {
 	static tableName() {

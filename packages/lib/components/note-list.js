@@ -2,10 +2,10 @@ const React = require('react');
 const Component = React.Component;
 const { connect } = require('react-redux');
 const { FlatList, Text, StyleSheet, Button, View } = require('react-native');
-const { _ } = require('inner/lib/locale');
-const { NoteItem } = require('inner/lib/components/note-item.js');
-const time = require('inner/lib/time').default;
-const { themeStyle } = require('inner/lib/components/global-style.js');
+const { _ } = require('../locale');
+const { NoteItem } = require('./note-item.js');
+const time = require('../time').default;
+const { themeStyle } = require('./global-style.js');
 
 class NoteListComponent extends Component {
 	constructor() {

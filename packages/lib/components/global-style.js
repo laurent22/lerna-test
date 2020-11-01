@@ -1,6 +1,6 @@
-const Setting = require('inner/lib/models/Setting').default;
+const Setting = require('../models/Setting').default;
 const { Platform } = require('react-native');
-const { themeById } = require('inner/lib/theme');
+const { themeById } = require('../theme');
 
 const baseStyle = {
 	appearance: 'light',

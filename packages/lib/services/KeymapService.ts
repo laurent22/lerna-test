@@ -1,9 +1,9 @@
 import { KeyboardEvent } from 'react';
-import eventManager from 'inner/lib/eventManager';
-import shim from 'inner/lib/shim';
-import { _ } from 'inner/lib/locale';
+import eventManager from '../eventManager';
+import shim from '../shim';
+import { _ } from '../locale';
 
-const BaseService = require('inner/lib/services/BaseService').default;
+const BaseService = require('./BaseService').default;
 
 const keysRegExp = /^([0-9A-Z)!@#$%^&*(:+<_>?~{|}";=,\-./`[\\\]']|F1*[1-9]|F10|F2[0-4]|Plus|Space|Tab|Backspace|Delete|Insert|Return|Enter|Up|Down|Left|Right|Home|End|PageUp|PageDown|Escape|Esc|VolumeUp|VolumeDown|VolumeMute|MediaNextTrack|MediaPreviousTrack|MediaStop|MediaPlayPause|PrintScreen)$/;
 const modifiersRegExp = {

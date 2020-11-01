@@ -1,14 +1,14 @@
-const Logger = require('inner/lib/Logger').default;
-const Note = require('inner/lib/models/Note');
-const Setting = require('inner/lib/models/Setting').default;
-const shim = require('inner/lib/shim').default;
+const Logger = require('../Logger').default;
+const Note = require('../models/Note');
+const Setting = require('../models/Setting').default;
+const shim = require('../shim').default;
 const EventEmitter = require('events');
-const { splitCommandString } = require('inner/lib/string-utils');
-const { fileExtension, basename } = require('inner/lib/path-utils');
+const { splitCommandString } = require('../string-utils');
+const { fileExtension, basename } = require('../path-utils');
 const spawn = require('child_process').spawn;
 const chokidar = require('chokidar');
 const bridge = require('electron').remote.require('./bridge').default;
-const time = require('inner/lib/time').default;
+const time = require('../time').default;
 const { ErrorNotFound } = require('./rest/errors');
 
 class ExternalEditWatcher {

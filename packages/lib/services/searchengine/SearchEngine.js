@@ -1,15 +1,15 @@
-const Logger = require('inner/lib/Logger').default;
-const ItemChange = require('inner/lib/models/ItemChange.js');
-const Setting = require('inner/lib/models/Setting').default;
-const Note = require('inner/lib/models/Note.js');
-const BaseModel = require('inner/lib/BaseModel').default;
-const ItemChangeUtils = require('inner/lib/services/ItemChangeUtils');
-const { pregQuote, scriptType } = require('inner/lib/string-utils.js');
+const Logger = require('../../Logger').default;
+const ItemChange = require('../../models/ItemChange.js');
+const Setting = require('../../models/Setting').default;
+const Note = require('../../models/Note.js');
+const BaseModel = require('../../BaseModel').default;
+const ItemChangeUtils = require('../ItemChangeUtils');
+const { pregQuote, scriptType } = require('../../string-utils.js');
 const removeDiacritics = require('diacritics').remove;
 const { sprintf } = require('sprintf-js');
 const filterParser = require('./filterParser').default;
 const queryBuilder = require('./queryBuilder').default;
-const shim = require('inner/lib/shim').default;
+const shim = require('../../shim').default;
 
 class SearchEngine {
 

@@ -1,19 +1,19 @@
-const uuid = require('inner/lib/uuid').default;
+const uuid = require('./uuid').default;
 const moment = require('moment');
-const BaseModel = require('inner/lib/BaseModel').default;
-const Note = require('inner/lib/models/Note.js');
-const Tag = require('inner/lib/models/Tag.js');
-const Resource = require('inner/lib/models/Resource.js');
-const Setting = require('inner/lib/models/Setting').default;
+const BaseModel = require('./BaseModel').default;
+const Note = require('./models/Note.js');
+const Tag = require('./models/Tag.js');
+const Resource = require('./models/Resource.js');
+const Setting = require('./models/Setting').default;
 const { MarkupToHtml } = require('@joplin/renderer');
 const { enexXmlToMd } = require('./import-enex-md-gen.js');
 const { enexXmlToHtml } = require('./import-enex-html-gen.js');
-const time = require('inner/lib/time').default;
+const time = require('./time').default;
 const Levenshtein = require('levenshtein');
 const md5 = require('md5');
 const { Base64Decode } = require('base64-stream');
 const md5File = require('md5-file');
-const shim = require('inner/lib/shim').default;
+const shim = require('./shim').default;
 
 // const Promise = require('promise');
 const fs = require('fs-extra');

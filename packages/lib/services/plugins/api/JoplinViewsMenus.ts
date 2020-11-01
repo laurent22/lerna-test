@@ -1,4 +1,4 @@
-import KeymapService from 'inner/lib/services/KeymapService';
+import KeymapService from '../../KeymapService';
 import { MenuItem, MenuItemLocation } from './types';
 import MenuController from '../MenuController';
 import Plugin from '../Plugin';

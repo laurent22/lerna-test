@@ -1,13 +1,13 @@
 const React = require('react');
 
 const { View, Text, Button, FlatList } = require('react-native');
-const Setting = require('inner/lib/models/Setting').default;
+const Setting = require('../../models/Setting').default;
 const { connect } = require('react-redux');
-const { ScreenHeader } = require('inner/lib/components/screen-header.js');
-const { ReportService } = require('inner/lib/services/report.js');
-const { _ } = require('inner/lib/locale');
-const { BaseScreenComponent } = require('inner/lib/components/base-screen.js');
-const { themeStyle } = require('inner/lib/components/global-style.js');
+const { ScreenHeader } = require('../screen-header.js');
+const { ReportService } = require('../../services/report.js');
+const { _ } = require('../../locale');
+const { BaseScreenComponent } = require('../base-screen.js');
+const { themeStyle } = require('../global-style.js');
 
 class StatusScreenComponent extends BaseScreenComponent {
 	static navigationOptions() {

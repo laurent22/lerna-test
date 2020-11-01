@@ -1,8 +1,8 @@
-const { promiseChain } = require('inner/lib/promise-utils.js');
-const { Database } = require('inner/lib/database.js');
+const { promiseChain } = require('./promise-utils.js');
+const { Database } = require('./database.js');
 const { sprintf } = require('sprintf-js');
-const Resource = require('inner/lib/models/Resource');
-const shim = require('inner/lib/shim').default;
+const Resource = require('./models/Resource');
+const shim = require('./shim').default;
 
 const structureSql = `
 CREATE TABLE folders (

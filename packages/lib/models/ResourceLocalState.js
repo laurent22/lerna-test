@@ -1,5 +1,5 @@
-const BaseModel = require('inner/lib/BaseModel').default;
-const { Database } = require('inner/lib/database.js');
+const BaseModel = require('../BaseModel').default;
+const { Database } = require('../database.js');
 
 class ResourceLocalState extends BaseModel {
 	static tableName() {

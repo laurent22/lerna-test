@@ -1,6 +1,6 @@
-const SyncTargetOneDrive = require('inner/lib/SyncTargetOneDrive.js');
-const { _ } = require('inner/lib/locale');
-const { parameters } = require('inner/lib/parameters.js');
+const SyncTargetOneDrive = require('./SyncTargetOneDrive.js');
+const { _ } = require('./locale');
+const { parameters } = require('./parameters.js');
 
 class SyncTargetOneDriveDev extends SyncTargetOneDrive {
 	static id() {

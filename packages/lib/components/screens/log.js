@@ -2,13 +2,13 @@ const React = require('react');
 
 const { FlatList, View, Text, Button, StyleSheet, Platform } = require('react-native');
 const { connect } = require('react-redux');
-const { reg } = require('inner/lib/registry.js');
-const { ScreenHeader } = require('inner/lib/components/screen-header.js');
-const time = require('inner/lib/time').default;
-const { themeStyle } = require('inner/lib/components/global-style.js');
-const Logger = require('inner/lib/Logger').default;
-const { BaseScreenComponent } = require('inner/lib/components/base-screen.js');
-const { _ } = require('inner/lib/locale');
+const { reg } = require('../../registry.js');
+const { ScreenHeader } = require('../screen-header.js');
+const time = require('../../time').default;
+const { themeStyle } = require('../global-style.js');
+const Logger = require('../../Logger').default;
+const { BaseScreenComponent } = require('../base-screen.js');
+const { _ } = require('../../locale');
 
 class LogScreenComponent extends BaseScreenComponent {
 	static navigationOptions() {

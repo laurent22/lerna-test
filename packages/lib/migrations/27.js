@@ -1,4 +1,4 @@
-const Setting = require('inner/lib/models/Setting').default;
+const Setting = require('../models/Setting').default;
 
 const script = {};
 

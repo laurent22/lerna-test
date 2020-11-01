@@ -3,7 +3,7 @@ const Component = React.Component;
 const { TouchableOpacity, Text, StyleSheet, ScrollView, View } = require('react-native');
 const { connect } = require('react-redux');
 const Icon = require('react-native-vector-icons/Ionicons').default;
-const { themeStyle } = require('inner/lib/components/global-style.js');
+const { themeStyle } = require('./global-style.js');
 
 Icon.loadFont();
 
