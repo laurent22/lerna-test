@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+		"module": "commonjs",
+		"target": "es2015",
+		"declaration": true,
+		"alwaysStrict": true,
+		"forceConsistentCasingInFileNames": true,
+		"listEmittedFiles": false,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strictBindCallApply": true,
+		"strictFunctionTypes": true,
+		"sourceMap": true,
+		"jsx": "react",
+		"skipLibCheck": true,
+		"allowUmdGlobalAccess": true,
+		"baseUrl": ".",
+		// "paths": {
+		// 	"lib/*": ["./ReactNativeClient/lib/*"],
+		// },
+	},
+    // "include": [
+    //     // "ReactNativeClient/**/*",
+    //     // "ElectronClient/**/*",
+    //     "packages/app-cli/**/*",
+    //     "packages/lib/**/*",
+    //     "packages/renderer/**/*",
+    //     "packages/tools/**/*",
+	// ],
+	"include": [
+		"**/*.ts",
+	],
+	"exclude": [
+		"**/node_modules",
+	],
+}

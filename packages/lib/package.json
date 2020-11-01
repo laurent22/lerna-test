@@ -1,0 +1,24 @@
+{
+  "name": "@joplin/lib",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Laurent Cozic <laurent@cozic.net>",
+  "homepage": "",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "tsc": "node node_modules/ttypescript/bin/tsc --project tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.6",
+    "@types/react": "^16.9.55",
+    "ttypescript": "^1.5.12",
+    "typescript": "3.9.6",
+    "typescript-transform-paths": "^2.0.2"
+  },
+  "dependencies": {
+    "@joplin/renderer": "^1.0.8",
+    "immer": "^7.0.14",
+    "react": "^17.0.1"
+  }
+}
