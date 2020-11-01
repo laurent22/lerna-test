@@ -1,5 +1,11 @@
 const fs = require('fs-extra');
-const { dirname } = require('../pathUtils');
+
+function dirname(path) {
+	if (!path) throw new Error('Path is empty');
+	const s = path.split(/\/|\\/);
+	s.pop();
+	return s.join('/');
+}
 
 const rootDir = dirname(__dirname);
 const assetsDir = `${rootDir}/assets`;

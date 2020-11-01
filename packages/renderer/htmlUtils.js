@@ -1,5 +1,6 @@
 const Entities = require('html-entities').AllHtmlEntities;
 const htmlentities = new Entities().encode;
+const htmlparser2 = require('htmlparser2');
 
 // [\s\S] instead of . for multiline matching
 // https://stackoverflow.com/a/16119722/561309
@@ -69,14 +70,48 @@ class HtmlUtils {
 		return selfClosingElements.includes(tagName.toLowerCase());
 	}
 
+	// TODO: copied from @joplin/lib
+	stripHtml(html) {
+		const output = [];
+
+		const tagStack = [];
+
+		const currentTag = () => {
+			if (!tagStack.length) return '';
+			return tagStack[tagStack.length - 1];
+		};
+
+		const disallowedTags = ['script', 'style', 'head', 'iframe', 'frameset', 'frame', 'object', 'base'];
+
+		const parser = new htmlparser2.Parser({
+
+			onopentag: (name) => {
+				tagStack.push(name.toLowerCase());
+			},
+
+			ontext: (decodedText) => {
+				if (disallowedTags.includes(currentTag())) return;
+				output.push(decodedText);
+			},
+
+			onclosetag: (name) => {
+				if (currentTag() === name.toLowerCase()) tagStack.pop();
+			},
+
+		}, { decodeEntities: true });
+
+		parser.write(html);
+		parser.end();
+
+		return output.join('').replace(/\s+/g, ' ');
+	}
+
 	sanitizeHtml(html, options = null) {
 		options = Object.assign({}, {
 			// If true, adds a "jop-noMdConv" class to all the tags.
 			// It can be used afterwards to restore HTML tags in Markdown.
 			addNoMdConvClass: false,
 		}, options);
-
-		const htmlparser2 = require('htmlparser2');
 
 		const output = [];
 

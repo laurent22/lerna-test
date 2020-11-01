@@ -20,7 +20,7 @@ const tasks = {
 	compileExtensions: {
 		fn: require('@joplin/tools/gulp/tasks/compileExtensions.js'),
 	},
-	copyLib: require('@joplin/tools/gulp/tasks/copyLib'),
+	// copyLib: require('@joplin/tools/gulp/tasks/copyLib'),
 	tsc: require('@joplin/tools/gulp/tasks/tsc'),
 	updateIgnoredTypeScriptBuild: require('@joplin/tools/gulp/tasks/updateIgnoredTypeScriptBuild'),
 };
@@ -29,7 +29,7 @@ utils.registerGulpTasks(gulp, tasks);
 
 const buildSeries = [
 	'compileExtensions',
-	'copyLib',
+	// 'copyLib',
 ];
 
 // On Windows also run tsc because `npm run watch` locks some folders

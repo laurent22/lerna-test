@@ -1,9 +1,11 @@
 const htmlUtils = require('./htmlUtils');
 const utils = require('./utils');
 const noteStyle = require('./noteStyle').default;
-const Setting = require('@joplin/lib/models/Setting').default;
-const { themeStyle } = require('@joplin/lib/theme');
-const InMemoryCache = require('@joplin/lib/InMemoryCache').default;
+
+// TODO: fix
+// const Setting = require('@joplin/lib/models/Setting').default;
+// const { themeStyle } = require('@joplin/lib/theme');
+const InMemoryCache = require('./InMemoryCache').default;
 const md5 = require('md5');
 
 // Renderered notes can potentially be quite large (for example
@@ -94,8 +96,9 @@ class HtmlToHtml {
 			};
 		}
 
-		const lightTheme = themeStyle(Setting.THEME_LIGHT);
-		let cssStrings = noteStyle(lightTheme);
+		// const lightTheme = themeStyle(Setting.THEME_LIGHT);
+		// let cssStrings = noteStyle(lightTheme);
+		let cssStrings = [];
 
 		if (options.splitted) {
 			const splitted = this.splitHtml(html);

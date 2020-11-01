@@ -1,4 +1,11 @@
-const { formatCssSize } = require('@joplin/lib/string-utils');
+
+// TODO: copied from string-utils
+function formatCssSize(v) {
+	if (typeof v === 'string') {
+		if (v.includes('px') || v.includes('em') || v.includes('%')) return v;
+	}
+	return `${v}px`;
+}
 
 export default function(theme:any) {
 	theme = theme ? theme : {};

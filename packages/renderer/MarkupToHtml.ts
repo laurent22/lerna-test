@@ -1,6 +1,6 @@
 const MdToHtml = require('./MdToHtml').default;
 const HtmlToHtml = require('./HtmlToHtml');
-const htmlUtils = require('@joplin/lib/htmlUtils');
+const htmlUtils = require('./htmlUtils');
 const MarkdownIt = require('markdown-it');
 
 export enum MarkupLanguage {

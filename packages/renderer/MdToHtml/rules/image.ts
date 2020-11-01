@@ -1,6 +1,5 @@
 import { RuleOptions } from '../../MdToHtml';
 
-// const Resource = require('@joplin/lib/models/Resource.js');
 const utils = require('../../utils');
 const htmlUtils = require('../../htmlUtils.js');
 
