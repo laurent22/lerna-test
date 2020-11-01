@@ -1,4 +1,4 @@
-import ResourceEditWatcher from '../../../lib/services/ResourceEditWatcher/index';
+import ResourceEditWatcher from '@joplin/lib/services/ResourceEditWatcher/index';
 import { _ } from '@joplin/lib/locale';
 
 const bridge = require('electron').remote.require('./bridge').default;

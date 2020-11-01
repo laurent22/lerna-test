@@ -1,4 +1,4 @@
-import { CommandRuntime, CommandDeclaration } from '../lib/services/CommandService';
+import { CommandRuntime, CommandDeclaration } from '@joplin/lib/services/CommandService';
 import { _ } from '@joplin/lib/locale';
 import bridge from '../services/bridge';
 import Setting from '@joplin/lib/models/Setting';

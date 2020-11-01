@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import JoplinServerApi from '../lib/JoplinServerApi';
+import JoplinServerApi from '@joplin/lib/JoplinServerApi';
 
 import { _, _n } from '@joplin/lib/locale';
 const { themeStyle, buildStyle } = require('@joplin/lib/theme');

@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 import { FormNote } from './types';
 import contextMenu from './contextMenu';
-import ResourceEditWatcher from '../../../lib/services/ResourceEditWatcher/index';
+import ResourceEditWatcher from '@joplin/lib/services/ResourceEditWatcher/index';
 import { _ } from '@joplin/lib/locale';
 const BaseItem = require('@joplin/lib/models/BaseItem');
 const BaseModel = require('@joplin/lib/BaseModel').default;

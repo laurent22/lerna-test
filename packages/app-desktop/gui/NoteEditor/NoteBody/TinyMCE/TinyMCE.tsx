@@ -13,7 +13,7 @@ import { utils as pluginUtils } from '@joplin/lib/services/plugins/reducer';
 import { _, closestSupportedLocale } from '@joplin/lib/locale';
 import setupContextMenu from './utils/setupContextMenu';
 
-const { MarkupToHtml } = require('@joplin/lib/joplin-renderer');
+const { MarkupToHtml } = require('@joplin/renderer');
 const taboverride = require('taboverride');
 const { reg } = require('@joplin/lib/registry.js');
 const BaseItem = require('@joplin/lib/models/BaseItem');

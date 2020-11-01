@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import KeymapService from '../../../lib/services/KeymapService';
+import KeymapService from '@joplin/lib/services/KeymapService';
 
 const keymapService = KeymapService.instance();
 

@@ -1,6 +1,6 @@
 
 // TODO: copied from string-utils
-function formatCssSize(v) {
+function formatCssSize(v:any):string {
 	if (typeof v === 'string') {
 		if (v.includes('px') || v.includes('em') || v.includes('%')) return v;
 	}

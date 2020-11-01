@@ -23,6 +23,17 @@ const tasks = {
 	// copyLib: require('@joplin/tools/gulp/tasks/copyLib'),
 	tsc: require('@joplin/tools/gulp/tasks/tsc'),
 	updateIgnoredTypeScriptBuild: require('@joplin/tools/gulp/tasks/updateIgnoredTypeScriptBuild'),
+
+	linkReact: {
+		fn: () => {
+			// React is a dependency of both the lib and app-desktop
+			// packages, which cause a duplicate React issue. To go around
+			// this, one way is to manually link the package.
+			// https://reactjs.org/warnings/invalid-hook-call-warning.html#duplicate-react
+			process.chdir(__dirname + '/../lib');
+			return utils.execCommand('npm link ../app-desktop/node_modules/react');
+		},
+	},
 };
 
 utils.registerGulpTasks(gulp, tasks);
@@ -46,6 +57,7 @@ const buildParallel = [
 	'copyPluginAssets',
 	'copyTinyMceLangs',
 	'updateIgnoredTypeScriptBuild',
+	'linkReact',
 ];
 
 gulp.task('build', gulp.parallel(...buildParallel));

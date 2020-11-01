@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import AsyncActionQueue from '../../../lib/AsyncActionQueue';
+import AsyncActionQueue from '@joplin/lib/AsyncActionQueue';
 import { ToolbarButtonInfo } from '@joplin/lib/services/commands/ToolbarButtonUtils';
 import { PluginStates } from '@joplin/lib/services/plugins/reducer';
 

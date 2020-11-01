@@ -2,7 +2,7 @@ import { FormNote } from './types';
 
 const HtmlToMd = require('@joplin/lib/HtmlToMd');
 const Note = require('@joplin/lib/models/Note');
-const { MarkupToHtml } = require('@joplin/lib/joplin-renderer');
+const { MarkupToHtml } = require('@joplin/renderer');
 
 export async function htmlToMarkdown(markupLanguage: number, html: string, originalCss:string): Promise<string> {
 	let newBody = '';
