@@ -34,26 +34,12 @@ async function main() {
 
 		const newContent = content.replace(/('|")(inner\/lib\/.*)('|")/g, (_matched, p1, p2, p3) => {
 			const absoluteRequirePath = p2.substr(10);
-			// const absoluteRequireBasename = getBasename(absoluteRequirePath);
-
-			// const fileBasename = getBasename(file);
-
-
-			console.info(file, absoluteRequirePath, getRelativePath(file, absoluteRequirePath));
+			const relativePath = getRelativePath(file, absoluteRequirePath);
+			return p1 + relativePath + p3;
 		});
+
+		await fs.writeFile(libDir + '/' + file, newContent, 'utf8');
 	}
-
-	// const ignoredFiles = ignoredJsFiles.concat(ignoredMapFiles).concat(ignoredDefFiles);
-	// ignoredFiles.sort();
-
-	// const regex = /(# AUTO-GENERATED - EXCLUDED TYPESCRIPT BUILD)[\s\S]*(# AUTO-GENERATED - EXCLUDED TYPESCRIPT BUILD)/;
-	// const replacement = `$1\n${ignoredFiles.join('\n')}\n$2`;
-
-	// await Promise.all([
-	// 	utils.replaceFileText(`${rootDir}/.gitignore`, regex, replacement),
-	// 	// utils.replaceFileText(`${rootDir}/.eslintignore`, regex, replacement),
-	// 	// utils.replaceFileText(`${rootDir}/.ignore`, regex, replacement),
-	// ]);
 }
 
 main().catch((error) => {
