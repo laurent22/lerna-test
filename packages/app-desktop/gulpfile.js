@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const utils = require('../Tools/gulp/utils');
+const utils = require('@joplin/tools/gulp/utils');
 
 const tasks = {
 	compileScripts: {
@@ -18,11 +18,11 @@ const tasks = {
 		fn: require('./tools/electronRebuild.js'),
 	},
 	compileExtensions: {
-		fn: require('../Tools/gulp/tasks/compileExtensions.js'),
+		fn: require('@joplin/tools/gulp/tasks/compileExtensions.js'),
 	},
-	copyLib: require('../Tools/gulp/tasks/copyLib'),
-	tsc: require('../Tools/gulp/tasks/tsc'),
-	updateIgnoredTypeScriptBuild: require('../Tools/gulp/tasks/updateIgnoredTypeScriptBuild'),
+	copyLib: require('@joplin/tools/gulp/tasks/copyLib'),
+	tsc: require('@joplin/tools/gulp/tasks/tsc'),
+	updateIgnoredTypeScriptBuild: require('@joplin/tools/gulp/tasks/updateIgnoredTypeScriptBuild'),
 };
 
 utils.registerGulpTasks(gulp, tasks);

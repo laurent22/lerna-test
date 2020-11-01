@@ -6,8 +6,8 @@ const tasks = {
 	// 	fn: require('../Tools/gulp/tasks/compileExtensions.js'),
 	// },
 	// copyLib: require('../Tools/gulp/tasks/copyLib'),
-	tsc: require('../Tools/gulp/tasks/tsc'),
-	updateIgnoredTypeScriptBuild: require('../Tools/gulp/tasks/updateIgnoredTypeScriptBuild'),
+	// tsc: require('../Tools/gulp/tasks/tsc'),
+	// updateIgnoredTypeScriptBuild: require('../Tools/gulp/tasks/updateIgnoredTypeScriptBuild'),
 };
 
 tasks.prepareBuild = {
