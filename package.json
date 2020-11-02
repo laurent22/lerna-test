@@ -1,7 +1,45 @@
 {
-  "name": "root",
+  "name": "@joplin/root",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurent22/joplin.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "linter": "./node_modules/.bin/eslint --fix --quiet --ext .js --ext .jsx --ext .ts --ext .tsx",
+    "linter-precommit": "./node_modules/.bin/eslint --fix --ext .js --ext .jsx --ext .ts --ext .tsx",
+    "linter-ci": "./node_modules/.bin/eslint --quiet --ext .js --ext .jsx --ext .ts --ext .tsx",
+    "watch": "node node_modules/typescript/bin/tsc --watch --project tsconfig.dev.json",
+    "build": "gulp build",
+    "updateIgnored": "gulp updateIgnoredTypeScriptBuild",
+    "copyLib": "gulp copyLib",
+    "buildPluginDoc": "typedoc --name 'Joplin Plugin API Documentation' --mode file -theme 'Modules/PluginDocTheme/' --readme 'Modules/PluginDocTheme/index.md' --excludeNotExported --excludeExternals --excludePrivate --excludeProtected --out docs/api/references/plugin_api ReactNativeClient/lib/services/plugins/api/",
+    "buildApiDoc": "npm start --prefix=CliClient -- apidoc ../readme/api/references/rest_api.md",
+    "buildWebsite": "npm run buildApiDoc && node Tools/build-website.js && npm run buildPluginDoc",
+    "generatePluginTypes": "rm -rf ./plugin_types && node node_modules/typescript/bin/tsc --declaration --declarationDir ./plugin_types --project tsconfig.json",
+    "setupNewRelease": "node ./Tools/setupNewRelease",
+    "linkChecker": "linkchecker https://joplinapp.org"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "@typescript-eslint/eslint-plugin": "^2.10.0",
+    "@typescript-eslint/parser": "^2.10.0",
+    "eslint": "^7.6.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react-hooks": "^2.4.0",
+    "fs-extra": "^8.1.0",
+    "glob": "^7.1.6",
+    "gulp": "^4.0.2",
+    "husky": "^3.0.2",
+    "jasmine": "^3.5.0",
+    "lint-staged": "^9.2.1",
+    "typedoc": "^0.17.8"
   }
 }
