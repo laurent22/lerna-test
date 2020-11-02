@@ -1,11 +1,11 @@
 const gulp = require('gulp');
-const utils = require('./Tools/gulp/utils');
+const utils = require('./packages/tools/gulp/utils');
 
 const tasks = {
-	copyLib: require('./Tools/gulp/tasks/copyLib'),
-	tsc: require('./Tools/gulp/tasks/tsc'),
+	copyLib: require('./packages/tools/gulp/tasks/copyLib'),
+	tsc: require('./packages/tools/gulp/tasks/tsc'),
 	updateIgnoredTypeScriptBuild: require('./packages/tools/gulp/tasks/updateIgnoredTypeScriptBuild'),
-	deleteBuildDirs: require('./Tools/gulp/tasks/deleteBuildDirs'),
+	deleteBuildDirs: require('./packages/tools/gulp/tasks/deleteBuildDirs'),
 };
 
 utils.registerGulpTasks(gulp, tasks);
