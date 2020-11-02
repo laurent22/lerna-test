@@ -19,7 +19,11 @@ function deleteLink(path) {
 			// console.info('Error: ' + error.message);
 		}
 	} else {
-		fs.unlinkSync(toSystemSlashes(path));
+		try {
+			fs.unlinkSync(toSystemSlashes(path));
+		} catch (error) {
+
+		}
 	}
 }
 
