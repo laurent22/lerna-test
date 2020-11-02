@@ -30,6 +30,11 @@ const tasks = {
 			// React is a dependency of both the lib and app-desktop
 			// packages, which cause a duplicate React issue. To go around
 			// this, one way is to manually link the package.
+			//
+			// Note that React must also be unlinked in preinstall step
+			// otherwise there will be permission errors when running
+			// `lerna bootstrap`
+			//
 			// https://reactjs.org/warnings/invalid-hook-call-warning.html#duplicate-react
 			process.chdir(__dirname);
 			await fs.remove('./node_modules/react');

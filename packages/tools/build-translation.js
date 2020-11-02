@@ -5,19 +5,16 @@
 // sudo apt install gettext
 // sudo apt install translate-toolkit
 
-require('app-module-path').addPath(`${__dirname}/../packages/app-mobile`);
-
 const rootDir = `${__dirname}/../..`;
 
-const { filename, fileExtension } = require(`${rootDir}/packages/app-mobile/lib/path-utils.js`);
-const markdownUtils = require(`${rootDir}/packages/app-mobile/lib/markdownUtils`).default;
+const markdownUtils = require('@joplin/lib/markdownUtils').default;
 const fs = require('fs-extra');
 const gettextParser = require('gettext-parser');
 
 const localesDir = `${__dirname}/locales`;
 const libDir = `${rootDir}/packages/lib`;
 
-const { execCommand, isMac, insertContentIntoFile } = require('./tool-utils.js');
+const { execCommand, isMac, insertContentIntoFile, filename, fileExtension } = require('./tool-utils.js');
 const { countryDisplayName, countryCodeOnly } = require('@joplin/lib/locale');
 
 function parsePoFile(filePath) {
@@ -82,6 +79,7 @@ async function createPotFile(potFilePath) {
 	const excludedDirs = [
 		'./.git/*',
 		'./.github/*',
+		'./**/node_modules/*',
 		'./Assets/*',
 		'./docs/*',
 		'./Modules/*',
@@ -89,7 +87,6 @@ async function createPotFile(potFilePath) {
 		'./packages/app-cli/build/*',
 		'./packages/app-cli/locales-build/*',
 		'./packages/app-cli/locales/*',
-		'./packages/app-cli/node_modules/*',
 		'./packages/app-cli/tests-build/*',
 		'./packages/app-cli/tests/*',
 		'./packages/app-clipper/*',
@@ -97,16 +94,13 @@ async function createPotFile(potFilePath) {
 		'./packages/app-desktop/gui/note-viewer/pluginAssets/*',
 		'./packages/app-desktop/gui/style/*',
 		'./packages/app-desktop/lib/*',
-		'./packages/app-desktop/node_modules/*',
 		'./packages/app-desktop/pluginAssets/*',
 		'./packages/app-desktop/tools/*',
 		'./packages/app-mobile/android/*',
 		'./packages/app-mobile/ios/*',
-		'./packages/app-mobile/node_modules/*',
 		'./packages/app-mobile/pluginAssets/*',
 		'./packages/app-mobile/tools/*',
 		'./packages/renderer/assets/*',
-		'./packages/renderer/node_modules/*',
 		'./packages/tools/*',
 		'./patches/*',
 		'./readme/*',

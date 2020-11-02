@@ -134,6 +134,7 @@
 				"packages/app-mobile/node_modules",
 				"packages/app-mobile/pluginAssets",
 				"tests/logs",
+				"packages/tools/locales",
 				"packages/app-desktop/gui/note-viewer/pluginAssets"
 			], 
 		},

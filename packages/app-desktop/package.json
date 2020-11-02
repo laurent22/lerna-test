@@ -6,6 +6,7 @@
   "scripts": {
     "dist": "node_modules/.bin/electron-builder",
     "build": "patch-package --patch-dir ../../patches/shared && patch-package --patch-dir ../../patches/node && gulp build",
+    "preinstall": "node tools/unlinkReact",
     "postinstall": "npm run build && gulp electronRebuild",
     "tsc": "node node_modules/typescript/bin/tsc --project tsconfig.json",
     "start": "gulp build && electron . --env dev --log-level debug --no-welcome --open-dev-tools"
