@@ -258,7 +258,7 @@ toolUtils.basename = (path) => {
 
 toolUtils.filename = (path, includeDir = false) => {
 	if (!path) throw new Error('Path is empty');
-	const output = includeDir ? path : basename(path);
+	const output = includeDir ? path : toolUtils.basename(path);
 	if (output.indexOf('.') < 0) return output;
 
 	const splitted = output.split('.');
