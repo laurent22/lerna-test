@@ -545,6 +545,12 @@ packages/app-desktop/services/plugins/hooks/useViewIsReady.js.map
 packages/app-desktop/services/spellChecker/SpellCheckerServiceDriverNative.d.ts
 packages/app-desktop/services/spellChecker/SpellCheckerServiceDriverNative.js
 packages/app-desktop/services/spellChecker/SpellCheckerServiceDriverNative.js.map
+packages/app-mobile/PluginAssetsLoader.d.ts
+packages/app-mobile/PluginAssetsLoader.js
+packages/app-mobile/PluginAssetsLoader.js.map
+packages/app-mobile/setUpQuickActions.d.ts
+packages/app-mobile/setUpQuickActions.js
+packages/app-mobile/setUpQuickActions.js.map
 packages/lib/AsyncActionQueue.d.d.ts
 packages/lib/AsyncActionQueue.d.js
 packages/lib/AsyncActionQueue.d.js.map
