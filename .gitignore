@@ -2849,7 +2849,4 @@ packages/renderer/pathUtils.d.js.map
 packages/renderer/pathUtils.d.ts
 packages/renderer/pathUtils.js
 packages/renderer/pathUtils.js.map
-packages/tools/dummy.d.d.ts
-packages/tools/dummy.d.js
-packages/tools/dummy.d.js.map
 # AUTO-GENERATED - EXCLUDED TYPESCRIPT BUILD

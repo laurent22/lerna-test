@@ -2,6 +2,12 @@
 
 # Building the applications
 
+- Is using Lerna to manage to mono-repo
+- Gulp for build steps on each package
+
+Usage of Lerna is mostly transparent as the needed commands have been moved to the root package.json and thus are invoked for example when running `npm install` or `npm run watch`. One exception is when installing a new package. In that case, instead of using `npm i -s ...` you will need to go to the root and use `lerna add package-to-add --scope=@joplin/package-name`. For example to add the package "leftpad" to the "@joplin/app-cli" package, you would write `lerna add leftpad --scope=@joplin/app-cli`.
+
+
 Note that all the applications share the same library, which, for historical reasons, is in `ReactNativeClient/lib`. This library is copied to the relevant directories when building each app.
 
 ## Required dependencies

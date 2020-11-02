@@ -1,13 +1,27 @@
 const fs = require('fs');
+const { execSync } = require("child_process");
 
-try {
-	fs.unlinkSync(`${__dirname}/../node_modules/react`);
-} catch (error) {
-	// ignore
+const isWindows = process.platform === "win32";
+
+function toSystemSlashes(path) {
+	const os = process.platform;
+	if (os === 'win32') return path.replace(/\//g, '\\');
+	return path.replace(/\\/g, '/');
 }
 
-try {
-	fs.unlinkSync(`${__dirname}/../node_modules/react-dom`);
-} catch (error) {
-	// ignore
+const nodeModulesPath = `${__dirname}/../node_modules`;
+
+function deleteLink(path) {
+	if (isWindows) {
+		try {
+			execSync(`rmdir "${toSystemSlashes(path)}"`, { stdio : 'pipe' });
+		} catch (error) {
+			// console.info('Error: ' + error.message);
+		}
+	} else {
+		fs.unlinkSync(toSystemSlashes(path));
+	}
 }
+
+deleteLink(nodeModulesPath + '/react');
+deleteLink(nodeModulesPath + '/react-dom');
