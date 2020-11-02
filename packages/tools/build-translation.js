@@ -14,10 +14,7 @@ const markdownUtils = require(`${rootDir}/packages/app-mobile/lib/markdownUtils`
 const fs = require('fs-extra');
 const gettextParser = require('gettext-parser');
 
-const cliDir = `${rootDir}/packages/app-cli`;
 const localesDir = `${__dirname}/locales`;
-const rnDir = `${rootDir}/packages/app-mobile`;
-const electronDir = `${rootDir}/packages/app-desktop`;
 const libDir = `${rootDir}/packages/lib`;
 
 const { execCommand, isMac, insertContentIntoFile } = require('./tool-utils.js');
