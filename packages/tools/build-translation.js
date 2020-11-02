@@ -116,7 +116,7 @@ async function createPotFile(potFilePath) {
 	baseArgs.push(`--output="${potFilePath}"`);
 	baseArgs.push('--language=JavaScript');
 	baseArgs.push('--copyright-holder="Laurent Cozic"');
-	baseArgs.push('--package-name=Joplin-CLI');
+	baseArgs.push('--package-name=Joplin');
 	baseArgs.push('--package-version=1.0.0');
 	// baseArgs.push('--no-location');
 	baseArgs.push('--keyword=_n:1,2');
