@@ -21,11 +21,6 @@
     "setupNewRelease": "node ./Tools/setupNewRelease",
     "linkChecker": "linkchecker https://joplinapp.org"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "devDependencies": {
     "lerna": "^3.22.1",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
