@@ -7,7 +7,7 @@ const sourcePath = `${__dirname}/../../lib/randomClipperPort.js`;
 // changes anyway and it is committed to the repo.
 
 if (fs.pathExistsSync(sourcePath)) {
-	fs.copySync(sourcePath, `${__dirname}/../src/randomClipperPort.js`);
+	fs.copySync(sourcePath, `${__dirname}/src/randomClipperPort.js`);
 }
 
 // These files give warnings when loading the extension in Chrome, in dev mode
