@@ -17,5 +17,13 @@
 		"jsx": "react",
 		"skipLibCheck": true,
 		"allowUmdGlobalAccess": true,
-	}
+	},
+	"exclude": [
+		"**/node_modules",
+		"packages/app-desktop/dist/**/*",
+		"packages/app-cli/tests/support/**/*",
+		"packages/app-cli/tests-build/**/*",
+		"packages/app-cli/build/**/*",
+		"Modules/**/*",
+	],
 }
