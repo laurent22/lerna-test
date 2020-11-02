@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const fs = require('fs-extra');
-const utils = require('../Tools/gulp/utils');
+const utils = require('@joplin/tools/gulp/utils');
 const tasks = {
 	// compileExtensions: {
 	// 	fn: require('../Tools/gulp/tasks/compileExtensions.js'),
@@ -16,7 +16,7 @@ tasks.prepareBuild = {
 		await utils.copyDir(`${__dirname}/app`, buildDir, {
 			excluded: ['node_modules'],
 		});
-		await utils.copyDir(`${__dirname}/locales-build`, `${buildDir}/locales`);
+		// await utils.copyDir(`${__dirname}/locales-build`, `${buildDir}/locales`);
 		// await tasks.copyLib.fn();
 		await utils.copyFile(`${__dirname}/package.json`, `${buildDir}/package.json`);
 		await utils.copyFile(`${__dirname}/package-lock.json`, `${buildDir}/package-lock.json`);
@@ -57,7 +57,7 @@ tasks.prepareTestBuild = {
 			],
 		});
 
-		const rootDir = utils.rootDir();
+		// const rootDir = utils.rootDir();
 
 		// await utils.copyDir(`${rootDir}/ReactNativeClient/lib`, `${testBuildDir}/lib`, {
 		// 	excluded: [
@@ -72,11 +72,11 @@ tasks.prepareTestBuild = {
 utils.registerGulpTasks(gulp, tasks);
 
 
-// gulp.task('build', gulp.series([
-// 	// 'prepareBuild',
-// 	// 'compileExtensions',
-// 	// 'copyLib',
-// ]));
+gulp.task('build', gulp.series([
+	'prepareBuild',
+	// 'compileExtensions',
+	// 'copyLib',
+]));
 
 // gulp.task('buildTests', gulp.series([
 // 	// 'prepareTestBuild',
