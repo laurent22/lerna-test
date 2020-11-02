@@ -11,6 +11,8 @@ Modules/TinyMCE/IconPack/postinstall.js
 Modules/TinyMCE/JoplinLists/
 Modules/TinyMCE/langs/
 node_modules/
+packages/lib/lib/lib.js
+packages/lib/locales/index.js
 packages/app-cli/build
 packages/app-cli/build/
 packages/app-cli/locales

@@ -820,7 +820,7 @@ function useMenu(props:Props) {
 	return menu;
 }
 
-function MenuBar(props:Props):JSX.Element {
+function MenuBar(props:Props):any {
 	const menu = useMenu(props);
 	if (menu) Menu.setApplicationMenu(menu);
 	return null;

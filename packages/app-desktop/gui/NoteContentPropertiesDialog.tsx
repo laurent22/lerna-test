@@ -47,7 +47,7 @@ function formatReadTime(readTimeMinutes: number) {
 
 export default function NoteContentPropertiesDialog(props:NoteContentPropertiesDialogProps) {
 	const theme = themeStyle(props.themeId);
-	const tableBodyComps: JSX.Element[] = [];
+	const tableBodyComps: any[] = [];
 	// For the source Markdown
 	const [lines, setLines] = useState<number>(0);
 	const [words, setWords] = useState<number>(0);

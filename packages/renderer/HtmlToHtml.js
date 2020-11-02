@@ -1,6 +1,6 @@
 const htmlUtils = require('./htmlUtils');
 const utils = require('./utils');
-const noteStyle = require('./noteStyle').default;
+// const noteStyle = require('./noteStyle').default;
 
 // TODO: fix
 // const Setting = require('@joplin/lib/models/Setting').default;

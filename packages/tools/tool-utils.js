@@ -248,13 +248,13 @@ toolUtils.dirname = (path) => {
 	const s = path.split(/\/|\\/);
 	s.pop();
 	return s.join('/');
-}
+};
 
 toolUtils.basename = (path) => {
 	if (!path) throw new Error('Path is empty');
 	const s = path.split(/\/|\\/);
 	return s[s.length - 1];
-}
+};
 
 toolUtils.filename = (path, includeDir = false) => {
 	if (!path) throw new Error('Path is empty');
@@ -264,7 +264,7 @@ toolUtils.filename = (path, includeDir = false) => {
 	const splitted = output.split('.');
 	splitted.pop();
 	return splitted.join('.');
-}
+};
 
 toolUtils.fileExtension = (path) => {
 	if (!path) throw new Error('Path is empty');
@@ -272,6 +272,6 @@ toolUtils.fileExtension = (path) => {
 	const output = path.split('.');
 	if (output.length <= 1) return '';
 	return output[output.length - 1];
-}
+};
 
 module.exports = toolUtils;
