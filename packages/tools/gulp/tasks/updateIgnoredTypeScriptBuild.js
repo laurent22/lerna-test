@@ -7,18 +7,17 @@ module.exports = {
 	fn: async function() {
 		const tsFiles = glob.sync(`${rootDir}{/**/*.ts,/**/*.tsx}`, {
 			ignore: [
-				'**/node_modules/**',
 				'**/.git/**',
-				'**/app-desktop/lib/**',
 				'**/api-cli/build/**',
 				'**/api-cli/tests-build/**',
-				'**/app-desktop/dist/**',
-				'**/Modules/TinyMCE/JoplinLists/**',
-				'**/Modules/TinyMCE/IconPack/**',
 				'**/api-cli/tests/support/plugins/**',
-				'**/plugin_types/**',
+				'**/app-desktop/dist/**',
+				'**/app-desktop/lib/**',
+				'**/Assets/*',
 				'**/app-mobile/android/**',
 				'**/app-mobile/ios/**',
+				'**/node_modules/**',
+				'**/plugin_types/**',
 			],
 		}).map(f => f.substr(rootDir.length + 1));
 
