@@ -9,6 +9,7 @@
     "build": "gulp build",
     "patch-packages": "patch-package --patch-dir ../../patches/shared",
     "tsc": "node node_modules/typescript/bin/tsc --project tsconfig.json",
+    "preinstall": "node tools/unlinkReact.js",
     "postinstall": "npm run patch-packages && jetify && npm run build"
   },
   "dependencies": {
