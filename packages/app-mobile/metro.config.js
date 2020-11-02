@@ -5,12 +5,13 @@
  * @format
  */
 
-const { resolve } = require('path');
-const blacklist = require('metro-config/src/defaults/blacklist');
+// const { resolve } = require('path');
+// const blacklist = require('metro-config/src/defaults/blacklist');
 
-const watchFolders = [
-	resolve(__dirname + '/..'),
-];
+// const watchFolders = [
+// 	__dirname,
+// 	resolve(__dirname + '/..'),
+// ];
 
 module.exports = {
 	transformer: {
@@ -21,8 +22,8 @@ module.exports = {
 			},
 		}),
 	},
-	watchFolders,
-	resolver: {
-		blacklistRE: blacklist([/..\/app-cli\/.*/])
-	}
+	// watchFolders,
+	// resolver: {
+	// 	blacklistRE: blacklist([/..\/app-cli\/.*/])
+	// }
 };
