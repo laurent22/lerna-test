@@ -61,21 +61,19 @@ script:
   - |
     # Install tools
     npm install
-    cd Tools
-    npm install
-    cd ..
+    npx lerna bootstrap
 
     # Run test units.
     # Only do it for pull requests because Travis randomly fails to run them
     # and that would break the desktop release.
     if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
-      cd CliClient
+      cd packages/app-cli
       npm run test-ci
       testResult=$?
       if [ $testResult -ne 0 ]; then
         exit $testResult
       fi
-      cd ..
+      cd ../..
     fi
 
     # Run linter for pull requests only - this is so that
@@ -93,7 +91,7 @@ script:
     # tool like poedit. Doing it for Linux only is sufficient.
     if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
       if [ "$TRAVIS_OS_NAME" != "osx" ]; then
-        node Tools/validate-translation.js
+        node packages/tools/validate-translation.js
         testResult=$?
         if [ $testResult -ne 0 ]; then
           exit $testResult
@@ -112,5 +110,5 @@ script:
     fi
 
     # Prepare the Electron app and build it
-    cd ElectronClient
+    cd packages/app-desktop
     USE_HARD_LINKS=false npm run dist

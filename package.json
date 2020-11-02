@@ -10,15 +10,13 @@
     "linter": "./node_modules/.bin/eslint --fix --quiet --ext .js --ext .jsx --ext .ts --ext .tsx",
     "linter-precommit": "./node_modules/.bin/eslint --fix --ext .js --ext .jsx --ext .ts --ext .tsx",
     "linter-ci": "./node_modules/.bin/eslint --quiet --ext .js --ext .jsx --ext .ts --ext .tsx",
-    "watch": "node node_modules/typescript/bin/tsc --watch --project tsconfig.dev.json",
-    "build": "gulp build",
+    "watch": "lerna run watch --stream --parallel",
     "updateIgnored": "gulp updateIgnoredTypeScriptBuild",
-    "copyLib": "gulp copyLib",
     "buildPluginDoc": "typedoc --name 'Joplin Plugin API Documentation' --mode file -theme './Assets/PluginDocTheme/' --readme './Assets/PluginDocTheme/index.md' --excludeNotExported --excludeExternals --excludePrivate --excludeProtected --out docs/api/references/plugin_api packages/lib/services/plugins/api/",
     "buildApiDoc": "npm start --prefix=packages/app-cli -- apidoc ../../readme/api/references/rest_api.md",
     "buildWebsite": "npm run buildApiDoc && node ./packages/tools/build-website.js && npm run buildPluginDoc",
     "generatePluginTypes": "rm -rf ./plugin_types && node node_modules/typescript/bin/tsc --declaration --declarationDir ./plugin_types --project tsconfig.json",
-    "setupNewRelease": "node ./Tools/setupNewRelease",
+    "setupNewRelease": "node ./packages/tools/setupNewRelease",
     "linkChecker": "linkchecker https://joplinapp.org"
   },
   "devDependencies": {

@@ -10,7 +10,8 @@
     "buildAssets": "node Tools/buildAssets.js",
     "patch-packages": "patch-package --patch-dir ../../patches/shared",
     "postinstall": "npm run patch-packages && npm run buildAssets",
-    "tsc": "node node_modules/typescript/bin/tsc --project tsconfig.json"
+    "tsc": "node node_modules/typescript/bin/tsc --project tsconfig.json",
+    "watch": "node node_modules/typescript/bin/tsc --watch --project tsconfig.json"
   },
   "author": "",
   "license": "MIT",
