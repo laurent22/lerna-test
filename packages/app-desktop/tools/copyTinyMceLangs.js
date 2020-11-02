@@ -3,7 +3,7 @@ const glob = require('glob');
 const utils = require('@joplin/tools/gulp/utils');
 
 async function main() {
-	const sourceDir = `${__dirname}/../../../Modules/TinyMCE/langs`;
+	const sourceDir = `${__dirname}/../../../Assets/TinyMCE/langs`;
 	const destDir = `${__dirname}/../node_modules/tinymce/langs`;
 	console.info(`Copying ${sourceDir} => ${destDir}`);
 	await utils.copyDir(sourceDir, destDir);
