@@ -5,6 +5,12 @@ _releases/
 *.min.js
 **/node_modules/
 Assets/
+docs/
+highlight.pack.js
+Modules/TinyMCE/IconPack/postinstall.js
+Modules/TinyMCE/JoplinLists/
+Modules/TinyMCE/langs/
+node_modules/
 packages/app-cli/build
 packages/app-cli/build/
 packages/app-cli/locales
@@ -27,35 +33,26 @@ packages/app-clipper/popup/config/webpack_config_at_eject_time.js
 packages/app-clipper/popup/config/webpack.config.js
 packages/app-clipper/popup/node_modules
 packages/app-clipper/popup/scripts/build.js
-docs/
 packages/app-desktop/dist
 packages/app-desktop/gui/NoteEditor/NoteBody/TinyMCE/plugins/lists.js
 packages/app-desktop/gui/NoteEditor/NoteBody/TinyMCE/supportedLocales.js
-packages/app-desktop/lib
-packages/app-desktop/lib/vendor/sjcl-rn.js
-packages/app-desktop/lib/vendor/sjcl.js
 packages/app-desktop/locales
 packages/app-desktop/node_modules
 packages/app-desktop/packageInfo.js
-highlight.pack.js
-Modules/TinyMCE/IconPack/postinstall.js
-Modules/TinyMCE/JoplinLists/
-Modules/TinyMCE/langs/
-node_modules/
-plugin_types/
 packages/app-mobile/android
 packages/app-mobile/ios
-packages/app-mobile/lib/joplin-renderer/assets/
-packages/app-mobile/lib/joplin-renderer/vendor/fountain.min.js
-packages/app-mobile/lib/rnInjectedJs/
-packages/app-mobile/lib/vendor/
-packages/app-mobile/lib/welcomeAssets.js
 packages/app-mobile/locales
 packages/app-mobile/node_modules
 packages/app-mobile/pluginAssets/
-readme/
+packages/lib/assets/
+packages/lib/rnInjectedJs/
+packages/lib/vendor/
+packages/lib/vendor/fountain.min.js
+packages/lib/welcomeAssets.js
 packages/tools/node_modules
 packages/tools/PortableAppsLauncher
+plugin_types/
+readme/
 
 # AUTO-GENERATED - EXCLUDED TYPESCRIPT BUILD
 
