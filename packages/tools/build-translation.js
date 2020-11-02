@@ -5,19 +5,20 @@
 // sudo apt install gettext
 // sudo apt install translate-toolkit
 
-require('app-module-path').addPath(`${__dirname}/../ReactNativeClient`);
+require('app-module-path').addPath(`${__dirname}/../packages/app-mobile`);
 
-const rootDir = `${__dirname}/..`;
+const rootDir = `${__dirname}/../..`;
 
-const { filename, fileExtension } = require(`${rootDir}/ReactNativeClient/lib/path-utils.js`);
-const markdownUtils = require(`${rootDir}/ReactNativeClient/lib/markdownUtils`).default;
+const { filename, fileExtension } = require(`${rootDir}/packages/app-mobile/lib/path-utils.js`);
+const markdownUtils = require(`${rootDir}/packages/app-mobile/lib/markdownUtils`).default;
 const fs = require('fs-extra');
 const gettextParser = require('gettext-parser');
 
-const cliDir = `${rootDir}/CliClient`;
-const cliLocalesDir = `${cliDir}/locales`;
-const rnDir = `${rootDir}/ReactNativeClient`;
-const electronDir = `${rootDir}/ElectronClient`;
+const cliDir = `${rootDir}/packages/app-cli`;
+const localesDir = `${__dirname}/locales`;
+const rnDir = `${rootDir}/packages/app-mobile`;
+const electronDir = `${rootDir}/packages/app-desktop`;
+const libDir = `${rootDir}/packages/lib`;
 
 const { execCommand, isMac, insertContentIntoFile } = require('./tool-utils.js');
 const { countryDisplayName, countryCodeOnly } = require('@joplin/lib/locale');
@@ -85,38 +86,38 @@ async function createPotFile(potFilePath) {
 		'./.git/*',
 		'./.github/*',
 		'./Assets/*',
-		'./CliClient/build/*',
-		'./CliClient/locales-build/*',
-		'./CliClient/locales/*',
-		'./CliClient/node_modules/*',
-		'./CliClient/tests-build/*',
-		'./CliClient/tests/*',
-		'./Clipper/*',
 		'./docs/*',
-		'./ElectronClient/dist/*',
-		'./ElectronClient/gui/style/*',
-		'./ElectronClient/lib/*',
-		'./ElectronClient/node_modules/*',
-		'./ElectronClient/pluginAssets/*',
-		'./ElectronClient/tools/*',
-		'./ElectronClient/gui/note-viewer/pluginAssets/*',
-		'./ReactNativeClient/lib/joplin-renderer/assets/*',
 		'./Modules/*',
 		'./node_modules/*',
-		'./ReactNativeClient/lib/joplin-renderer/node_modules/*',
+		'./packages/app-cli/build/*',
+		'./packages/app-cli/locales-build/*',
+		'./packages/app-cli/locales/*',
+		'./packages/app-cli/node_modules/*',
+		'./packages/app-cli/tests-build/*',
+		'./packages/app-cli/tests/*',
+		'./packages/app-clipper/*',
+		'./packages/app-desktop/dist/*',
+		'./packages/app-desktop/gui/note-viewer/pluginAssets/*',
+		'./packages/app-desktop/gui/style/*',
+		'./packages/app-desktop/lib/*',
+		'./packages/app-desktop/node_modules/*',
+		'./packages/app-desktop/pluginAssets/*',
+		'./packages/app-desktop/tools/*',
+		'./packages/app-mobile/android/*',
+		'./packages/app-mobile/ios/*',
+		'./packages/app-mobile/node_modules/*',
+		'./packages/app-mobile/pluginAssets/*',
+		'./packages/app-mobile/tools/*',
+		'./packages/renderer/assets/*',
+		'./packages/renderer/node_modules/*',
+		'./packages/tools/*',
 		'./patches/*',
-		'./ReactNativeClient/android/*',
-		'./ReactNativeClient/ios/*',
-		'./ReactNativeClient/node_modules/*',
-		'./ReactNativeClient/pluginAssets/*',
-		'./ReactNativeClient/tools/*',
 		'./readme/*',
-		'./Tools/*',
 	];
 
 	const findCommand = `find . -iname '*.js' -not -path '${excludedDirs.join('\' -not -path \'')}'`;
 
-	process.chdir(`${__dirname}/..`);
+	process.chdir(rootDir);
 	const files = (await execCommand(findCommand)).split('\n');
 
 	const baseArgs = [];
@@ -175,7 +176,7 @@ function buildIndex(locales, stats) {
 
 function availableLocales(defaultLocale) {
 	const output = [defaultLocale];
-	fs.readdirSync(cliLocalesDir).forEach((path) => {
+	fs.readdirSync(localesDir).forEach((path) => {
 		if (fileExtension(path) !== 'po') return;
 		const locale = filename(path);
 		if (locale === defaultLocale) return;
@@ -269,7 +270,7 @@ function flagImageUrl(locale) {
 }
 
 function poFileUrl(locale) {
-	return `https://github.com/laurent22/joplin/blob/dev/CliClient/locales/${locale}.po`;
+	return `https://github.com/laurent22/joplin/blob/dev/packages/app-cli/locales/${locale}.po`;
 }
 
 function translationStatusToMdTable(status) {
@@ -296,8 +297,8 @@ async function updateReadmeWithStats(stats) {
 async function main() {
 	const argv = require('yargs').argv;
 
-	const potFilePath = `${cliLocalesDir}/joplin.pot`;
-	const jsonLocalesDir = `${cliDir}/build/locales`;
+	const potFilePath = `${localesDir}/joplin.pot`;
+	const jsonLocalesDir = `${libDir}/locales`;
 	const defaultLocale = 'en_GB';
 
 	const oldPotStatus = await translationStatus(false, potFilePath);
@@ -317,7 +318,7 @@ async function main() {
 		}
 	}
 
-	await execCommand(`cp "${potFilePath}" ` + `"${cliLocalesDir}/${defaultLocale}.po"`);
+	await execCommand(`cp "${potFilePath}" ` + `"${localesDir}/${defaultLocale}.po"`);
 
 	fs.mkdirpSync(jsonLocalesDir, 0o755);
 
@@ -329,7 +330,7 @@ async function main() {
 
 		console.info(`Building ${locale}...`);
 
-		const poFilePäth = `${cliLocalesDir}/${locale}.po`;
+		const poFilePäth = `${localesDir}/${locale}.po`;
 		const jsonFilePath = `${jsonLocalesDir}/${locale}.json`;
 		if (locale != defaultLocale) await mergePotToPo(potFilePath, poFilePäth);
 		buildLocale(poFilePäth, jsonFilePath);
@@ -344,15 +345,15 @@ async function main() {
 
 	saveToFile(`${jsonLocalesDir}/index.js`, buildIndex(locales, stats));
 
-	const destDirs = [
-		`${rnDir}/locales`,
-		`${electronDir}/locales`,
-		`${cliDir}/locales-build`,
-	];
+	// const destDirs = [
+	// 	`${libDir}/locales`,
+	// 	`${electronDir}/locales`,
+	// 	`${cliDir}/locales-build`,
+	// ];
 
-	for (const destDir of destDirs) {
-		await execCommand(`rsync -a "${jsonLocalesDir}/" "${destDir}/"`);
-	}
+	// for (const destDir of destDirs) {
+	// 	await execCommand(`rsync -a "${jsonLocalesDir}/" "${destDir}/"`);
+	// }
 
 	await updateReadmeWithStats(stats);
 }
