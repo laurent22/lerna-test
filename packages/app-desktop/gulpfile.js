@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const utils = require('@joplin/tools/gulp/utils');
+const fs = require('fs-extra');
 
 const tasks = {
 	compileScripts: {
@@ -25,13 +26,16 @@ const tasks = {
 	updateIgnoredTypeScriptBuild: require('@joplin/tools/gulp/tasks/updateIgnoredTypeScriptBuild'),
 
 	linkReact: {
-		fn: () => {
+		fn: async () => {
 			// React is a dependency of both the lib and app-desktop
 			// packages, which cause a duplicate React issue. To go around
 			// this, one way is to manually link the package.
 			// https://reactjs.org/warnings/invalid-hook-call-warning.html#duplicate-react
-			process.chdir(__dirname + '/../lib');
-			return utils.execCommand('npm link ../app-desktop/node_modules/react');
+			process.chdir(__dirname);
+			await fs.remove('./node_modules/react');
+			await fs.remove('./node_modules/react-dom');
+			await utils.execCommand('npm link ../lib/node_modules/react');
+			await utils.execCommand('npm link ../lib/node_modules/react-dom');
 		},
 	},
 };
