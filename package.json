@@ -10,6 +10,8 @@
     "linter": "./node_modules/.bin/eslint --fix --quiet --ext .js --ext .jsx --ext .ts --ext .tsx",
     "linter-precommit": "./node_modules/.bin/eslint --fix --ext .js --ext .jsx --ext .ts --ext .tsx",
     "linter-ci": "./node_modules/.bin/eslint --quiet --ext .js --ext .jsx --ext .ts --ext .tsx",
+    "postinstall": "lerna bootstrap && npm run tsc-build",
+    "tsc-build": "lerna run tsc --stream --parallel",
     "watch": "lerna run watch --stream --parallel",
     "updateIgnored": "gulp updateIgnoredTypeScriptBuild",
     "buildPluginDoc": "typedoc --name 'Joplin Plugin API Documentation' --mode file -theme './Assets/PluginDocTheme/' --readme './Assets/PluginDocTheme/index.md' --excludeNotExported --excludeExternals --excludePrivate --excludeProtected --out docs/api/references/plugin_api packages/lib/services/plugins/api/",

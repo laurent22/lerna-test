@@ -5,7 +5,6 @@
   "main": "index.js",
   "author": "Laurent Cozic",
   "scripts": {
-    "tsc": "node node_modules/typescript/bin/tsc --project tsconfig.json",
     "updateIgnored": "gulp updateIgnoredTypeScriptBuild"
   },
   "repository": {
