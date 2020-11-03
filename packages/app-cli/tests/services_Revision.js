@@ -2,7 +2,7 @@
 
 
 const time = require('@joplin/lib/time').default;
-const { asyncTest, fileContentEqual, setupDatabase, revisionService, setupDatabaseAndSynchronizer, db, synchronizer, fileApi, sleep, clearDatabase, switchClient, syncTargetId, objectsEqual, checkThrowAsync } = require('test-utils.js');
+const { asyncTest, fileContentEqual, setupDatabase, revisionService, setupDatabaseAndSynchronizer, db, synchronizer, fileApi, sleep, clearDatabase, switchClient, syncTargetId, objectsEqual, checkThrowAsync } = require('./test-utils.js');
 const Folder = require('@joplin/lib/models/Folder.js');
 const Setting = require('@joplin/lib/models/Setting').default;
 const Note = require('@joplin/lib/models/Note.js');

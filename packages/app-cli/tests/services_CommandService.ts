@@ -2,7 +2,7 @@ import MenuUtils from '@joplin/lib/services/commands/MenuUtils';
 import ToolbarButtonUtils from '@joplin/lib/services/commands/ToolbarButtonUtils';
 import CommandService, { CommandDeclaration, CommandRuntime } from '@joplin/lib/services/CommandService';
 
-const { asyncTest, setupDatabaseAndSynchronizer, switchClient, expectThrow, expectNotThrow } = require('test-utils.js');
+const { asyncTest, setupDatabaseAndSynchronizer, switchClient, expectThrow, expectNotThrow } = require('./test-utils.js');
 
 interface TestCommand {
 	declaration: CommandDeclaration,

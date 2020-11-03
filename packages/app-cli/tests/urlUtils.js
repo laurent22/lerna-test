@@ -1,5 +1,5 @@
 
-const { asyncTest } = require('test-utils.js');
+const { asyncTest } = require('./test-utils.js');
 const urlUtils = require('@joplin/lib/urlUtils.js');
 
 process.on('unhandledRejection', (reason, p) => {

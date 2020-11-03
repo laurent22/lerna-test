@@ -3,7 +3,7 @@
 
 const uuid = require('@joplin/lib/uuid').default;
 const time = require('@joplin/lib/time').default;
-const { asyncTest, sleep, fileApi, fileContentEqual, checkThrowAsync } = require('test-utils.js');
+const { asyncTest, sleep, fileApi, fileContentEqual, checkThrowAsync } = require('./test-utils.js');
 const shim = require('@joplin/lib/shim').default;
 const fs = require('fs-extra');
 const Setting = require('@joplin/lib/models/Setting').default;

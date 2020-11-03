@@ -2,7 +2,7 @@
 
 
 const time = require('@joplin/lib/time').default;
-const { asyncTest, resourceService, decryptionWorker, encryptionService, loadEncryptionMasterKey, allSyncTargetItemsEncrypted, fileContentEqual, setupDatabase, setupDatabaseAndSynchronizer, db, synchronizer, fileApi, sleep, clearDatabase, switchClient, syncTargetId, objectsEqual, checkThrowAsync } = require('test-utils.js');
+const { asyncTest, resourceService, decryptionWorker, encryptionService, loadEncryptionMasterKey, allSyncTargetItemsEncrypted, fileContentEqual, setupDatabase, setupDatabaseAndSynchronizer, db, synchronizer, fileApi, sleep, clearDatabase, switchClient, syncTargetId, objectsEqual, checkThrowAsync } = require('./test-utils.js');
 const InteropService = require('@joplin/lib/services/interop/InteropService').default;
 const Folder = require('@joplin/lib/models/Folder.js');
 const Note = require('@joplin/lib/models/Note.js');

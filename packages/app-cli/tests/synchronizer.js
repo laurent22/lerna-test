@@ -2,7 +2,7 @@
 
 
 const time = require('@joplin/lib/time').default;
-const { setupDatabase, synchronizerStart, syncTargetName, allSyncTargetItemsEncrypted, tempFilePath, resourceFetcher, kvStore, revisionService, setupDatabaseAndSynchronizer, db, synchronizer, fileApi, sleep, clearDatabase, switchClient, syncTargetId, encryptionService, loadEncryptionMasterKey, fileContentEqual, decryptionWorker, checkThrowAsync, asyncTest } = require('test-utils.js');
+const { setupDatabase, synchronizerStart, syncTargetName, allSyncTargetItemsEncrypted, tempFilePath, resourceFetcher, kvStore, revisionService, setupDatabaseAndSynchronizer, db, synchronizer, fileApi, sleep, clearDatabase, switchClient, syncTargetId, encryptionService, loadEncryptionMasterKey, fileContentEqual, decryptionWorker, checkThrowAsync, asyncTest } = require('./test-utils.js');
 const shim = require('@joplin/lib/shim').default;
 const fs = require('fs-extra');
 const Folder = require('@joplin/lib/models/Folder.js');

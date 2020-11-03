@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 
-const { asyncTest } = require('test-utils.js');
+const { asyncTest } = require('./test-utils.js');
 const htmlUtils = require('@joplin/lib/htmlUtils.js');
 
 process.on('unhandledRejection', (reason, p) => {

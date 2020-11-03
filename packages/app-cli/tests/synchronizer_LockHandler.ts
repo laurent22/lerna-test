@@ -1,7 +1,7 @@
 import LockHandler, { LockType, LockHandlerOptions, Lock } from '@joplin/lib/services/synchronizer/LockHandler';
 
 
-const { isNetworkSyncTarget, asyncTest, fileApi, setupDatabaseAndSynchronizer, synchronizer, switchClient, msleep, expectThrow, expectNotThrow } = require('test-utils.js');
+const { isNetworkSyncTarget, asyncTest, fileApi, setupDatabaseAndSynchronizer, synchronizer, switchClient, msleep, expectThrow, expectNotThrow } = require('./test-utils.js');
 
 process.on('unhandledRejection', (reason:any, p:any) => {
 	console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);

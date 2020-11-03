@@ -3,7 +3,7 @@ import { CustomExportContext, CustomImportContext, Module, ModuleType } from '@j
 import shim from '@joplin/lib/shim';
 
 
-const { asyncTest, fileContentEqual, setupDatabaseAndSynchronizer, switchClient, checkThrowAsync } = require('test-utils.js');
+const { asyncTest, fileContentEqual, setupDatabaseAndSynchronizer, switchClient, checkThrowAsync } = require('./test-utils.js');
 const Folder = require('@joplin/lib/models/Folder.js');
 const Note = require('@joplin/lib/models/Note.js');
 const Tag = require('@joplin/lib/models/Tag.js');

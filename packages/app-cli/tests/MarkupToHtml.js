@@ -1,5 +1,5 @@
 
-const { asyncTest } = require('test-utils.js');
+const { asyncTest } = require('./test-utils.js');
 const MarkupToHtml = require('@joplin/renderer/MarkupToHtml').default;
 
 describe('MarkupToHtml', function() {

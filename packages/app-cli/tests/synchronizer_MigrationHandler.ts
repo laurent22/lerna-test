@@ -8,7 +8,7 @@ import { Dirnames } from '@joplin/lib/services/synchronizer/utils/types';
 // gulp buildTests -L && node tests-build/support/createSyncTargetSnapshot.js normal && node tests-build/support/createSyncTargetSnapshot.js e2ee
 
 
-const { asyncTest, setSyncTargetName, fileApi, synchronizer, decryptionWorker, encryptionService, setupDatabaseAndSynchronizer, switchClient, expectThrow, expectNotThrow } = require('test-utils.js');
+const { asyncTest, setSyncTargetName, fileApi, synchronizer, decryptionWorker, encryptionService, setupDatabaseAndSynchronizer, switchClient, expectThrow, expectNotThrow } = require('./test-utils.js');
 const { deploySyncTargetSnapshot, testData, checkTestData } = require('./support/syncTargetUtils');
 const Setting = require('@joplin/lib/models/Setting').default;
 const MasterKey = require('@joplin/lib/models/MasterKey');

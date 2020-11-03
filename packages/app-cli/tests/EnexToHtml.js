@@ -1,5 +1,5 @@
 
-const { asyncTest, setupDatabaseAndSynchronizer, switchClient } = require('test-utils.js');
+const { asyncTest, setupDatabaseAndSynchronizer, switchClient } = require('./test-utils.js');
 const shim = require('@joplin/lib/shim').default;
 const { enexXmlToHtml } = require('@joplin/lib/import-enex-html-gen.js');
 const cleanHtml = require('clean-html');

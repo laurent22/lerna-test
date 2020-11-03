@@ -1,7 +1,7 @@
 'use strict';
 
 
-const { asyncTest,checkThrow } = require('test-utils.js');
+const { asyncTest,checkThrow } = require('./test-utils.js');
 const eventManager = require('@joplin/lib/eventManager').default;
 
 process.on('unhandledRejection', (reason, p) => {
