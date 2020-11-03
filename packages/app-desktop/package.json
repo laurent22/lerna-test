@@ -121,9 +121,9 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
-    "@joplin/lib": "^0.0.0",
-    "@joplin/renderer": "^1.0.9",
-    "@joplin/tools": "^1.0.1",
+    "@joplin/lib": "*",
+    "@joplin/renderer": "*",
+    "@joplin/tools": "*",
     "async-mutex": "^0.1.3",
     "codemirror": "^5.56.0",
     "color": "^3.1.2",
