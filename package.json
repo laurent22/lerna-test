@@ -1,5 +1,5 @@
 {
-  "name": "@joplin/root",
+  "name": "root",
   "private": true,
   "repository": {
     "type": "git",
