@@ -1,8 +1,8 @@
-const utils = require('@joplin/tools/gulp/utils');
+const utils = require('@joplinapp/tools/gulp/utils');
 
 async function main() {
 	const rootDir = `${__dirname}/..`;
-	// TODO: should take from node_modules/@joplin/renderer
+	// TODO: should take from node_modules/@joplinapp/renderer
 	const sourceDir = `${rootDir}/../../packages/renderer/assets`;
 	const destDirs = [
 		`${rootDir}/gui/note-viewer/pluginAssets`,

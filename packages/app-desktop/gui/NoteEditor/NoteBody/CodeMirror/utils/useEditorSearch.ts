@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import shim from '@joplin/lib/shim';
+import shim from '@joplinapp/lib/shim';
 
 export default function useEditorSearch(CodeMirror: any) {
 

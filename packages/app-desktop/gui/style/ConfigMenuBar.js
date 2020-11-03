@@ -1,5 +1,5 @@
 const { createSelector } = require('reselect');
-const { themeStyle } = require('@joplin/lib/theme');
+const { themeStyle } = require('@joplinapp/lib/theme');
 
 const themeSelector = (state, props) => themeStyle(props.themeId);
 

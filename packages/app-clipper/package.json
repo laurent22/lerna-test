@@ -1,5 +1,5 @@
 {
-  "name": "@joplin/app-clipper",
+  "name": "@joplinapp/app-clipper",
   "private": true,
   "version": "1.0.3",
   "description": "Joplin Web Clipper",

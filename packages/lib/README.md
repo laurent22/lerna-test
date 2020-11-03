@@ -1,4 +1,4 @@
-# @joplin/lib
+# @joplinapp/lib
 
 Library shared between all applications.
 

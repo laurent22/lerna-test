@@ -39,8 +39,8 @@ module.exports = {
              * module as they would be imported when the module is actually used.
              */
             {
-                '@joplin/lib': path.resolve(__dirname, '../lib/'),
-                '@joplin/renderer': path.resolve(__dirname, '../renderer/'),
+                '@joplinapp/lib': path.resolve(__dirname, '../lib/'),
+                '@joplinapp/renderer': path.resolve(__dirname, '../renderer/'),
             },
             {
                 get: (target, name) =>
