@@ -5,6 +5,9 @@
   "author": "Laurent Cozic <laurent@cozic.net>",
   "homepage": "",
   "license": "ISC",
+  "publishConfig": {
+		"access": "public"
+	},
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "tsc": "node node_modules/typescript/bin/tsc --project tsconfig.json",

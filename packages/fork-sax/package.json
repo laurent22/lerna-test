@@ -4,6 +4,9 @@
   "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
   "version": "1.2.7",
   "main": "lib/sax.js",
+  "publishConfig": {
+		"access": "public"
+	},
   "license": "ISC",
   "repository": "git://github.com/isaacs/sax-js.git",
   "files": [

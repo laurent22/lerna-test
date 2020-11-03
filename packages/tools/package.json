@@ -7,6 +7,9 @@
   "scripts": {
     "updateIgnored": "gulp updateIgnoredTypeScriptBuild"
   },
+  "publishConfig": {
+		"access": "public"
+	},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/laurent22/joplin.git"
