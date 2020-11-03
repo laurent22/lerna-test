@@ -3,7 +3,7 @@
 require('app-module-path').addPath(__dirname);
 
 const time = require('@joplin/lib/time').default;
-const { asyncTest, fileContentEqual, setupDatabase, setupDatabaseAndSynchronizer, db, synchronizer, fileApi, sleep, clearDatabase, switchClient, syncTargetId, objectsEqual, checkThrowAsync } = require('test-utils.js');
+const { asyncTest, fileContentEqual, setupDatabase, setupDatabaseAndSynchronizer, db, synchronizer, fileApi, sleep, clearDatabase, switchClient, syncTargetId, objectsEqual, checkThrowAsync } = require('./test-utils.js');
 const ArrayUtils = require('@joplin/lib/ArrayUtils');
 
 process.on('unhandledRejection', (reason, p) => {
