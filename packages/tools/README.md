@@ -1,11 +1,3 @@
-# `@joplin/tools`
+# @joplin/tools
 
-> TODO: description
-
-## Usage
-
-```
-const tools = require('@joplin/tools');
-
-// TODO: DEMONSTRATE API
-```
+Various Joplin-related tools and helpers to build the apps, the website, etc.

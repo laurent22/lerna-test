@@ -51,6 +51,7 @@ const KeychainServiceDriverDummy = require('@joplin/lib/services/keychain/Keycha
 const md5 = require('md5');
 const S3 = require('aws-sdk/clients/s3');
 const { Dirnames } = require('@joplin/lib/services/synchronizer/utils/types');
+const sharp = require('sharp');
 
 const databases_ = [];
 let synchronizers_ = [];
@@ -69,7 +70,15 @@ let currentClient_ = 1;
 // https://stackoverflow.com/questions/9768444/possible-eventemitter-memory-leak-detected
 process.setMaxListeners(0);
 
-shimInit();
+let keytar;
+try {
+	keytar = shim.platformSupportsKeyChain() ? require('keytar') : null;
+} catch (error) {
+	console.error('Cannot load keytar - keychain support will be disabled', error);
+	keytar = null;
+}
+
+shimInit(sharp, keytar);
 
 shim.setIsTestingEnv(true);
 

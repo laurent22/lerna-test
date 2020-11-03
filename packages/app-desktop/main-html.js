@@ -77,7 +77,15 @@ Setting.setConstant('appType', 'desktop');
 console.info(`appId: ${Setting.value('appId')}`);
 console.info(`appType: ${Setting.value('appType')}`);
 
-shimInit();
+let keytar;
+try {
+	keytar = shim.platformSupportsKeyChain() ? require('keytar') : null;
+} catch (error) {
+	console.error('Cannot load keytar - keychain support will be disabled', error);
+	keytar = null;
+}
+
+shimInit(null, keytar);
 
 // Disable drag and drop of links inside application (which would
 // open it as if the whole app was a browser)

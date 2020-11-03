@@ -51,7 +51,9 @@ const gunzipFile = function(source, destination) {
 	});
 };
 
-function shimInit() {
+function shimInit(sharp = null, keytar = null) {
+	keytar = (shim.isWindows() || shim.isMac()) && !shim.isPortable() ? keytar : null;
+
 	shim.fsDriver = () => {
 		throw new Error('Not implemented');
 	};
@@ -151,8 +153,6 @@ function shimInit() {
 			await shim.writeImageToFile(image, mime, targetPath);
 		} else {
 			// For the CLI tool
-			const sharp = require('sharp');
-
 			const image = sharp(filePath);
 			const md = await image.metadata();
 
@@ -524,6 +524,9 @@ function shimInit() {
 		return timers.clearInterval(id);
 	};
 
+	shim.keytar = () => {
+		return keytar;
+	};
 }
 
 module.exports = { shimInit };

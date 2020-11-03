@@ -283,6 +283,31 @@ const shim = {
 		if (!react_) throw new Error('Trying to access React before it has been set!!!'); 
 		return react_;
 	},
+
+	platformSupportsKeyChain: () => {
+		// keytar throws an error when system keychain is not present; even
+		// when keytar itself is installed. try/catch to ensure system
+		// keychain is present and no error is thrown.
+
+		// For now, keychain support is disabled on Linux because when
+		// keytar is loaded it seems to cause the following error when
+		// loading Sharp:
+		//
+		// Something went wrong installing the "sharp" module
+		// /lib/x86_64-linux-gnu/libz.so.1: version `ZLIB_1.2.9' not found
+		// (required by
+		// /home/travis/build/laurent22/joplin/packages/app-cli/node_modules/sharp/build/Release/../../vendor/lib/libpng16.so.16)
+		//
+		// See: https://travis-ci.org/github/laurent22/joplin/jobs/686222036
+		//
+		// Also disabled in portable mode obviously.
+
+		return (shim.isWindows() || shim.isMac()) && !shim.isPortable();
+	},
+
+	keytar: ():any => {
+		throw new Error('Not implemented');
+	},
 };
 
 export default shim;

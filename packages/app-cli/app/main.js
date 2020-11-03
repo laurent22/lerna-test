@@ -22,6 +22,7 @@ const Setting = require('@joplin/lib/models/Setting').default;
 const Revision = require('@joplin/lib/models/Revision.js');
 const Logger = require('@joplin/lib/Logger').default;
 const FsDriverNode = require('@joplin/lib/fs-driver-node').default;
+const sharp = require('sharp');
 const { shimInit } = require('@joplin/lib/shim-init-node.js');
 const { _ } = require('@joplin/lib/locale');
 const { FileApiDriverLocal } = require('@joplin/lib/file-api-driver-local.js');
@@ -49,7 +50,15 @@ BaseItem.loadClass('Revision', Revision);
 Setting.setConstant('appId', `net.cozic.joplin${env === 'dev' ? 'dev' : ''}-cli`);
 Setting.setConstant('appType', 'cli');
 
-shimInit();
+let keytar;
+try {
+	keytar = shim.platformSupportsKeyChain() ? require('keytar') : null;
+} catch (error) {
+	console.error('Cannot load keytar - keychain support will be disabled', error);
+	keytar = null;
+}
+
+shimInit(sharp, keytar);
 
 const application = app();
 
