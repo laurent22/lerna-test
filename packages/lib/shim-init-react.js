@@ -13,12 +13,12 @@ const uuid = require('./uuid').default;
 const Resource = require('./models/Resource');
 
 const injectedJs = {
-	webviewLib: require('lib/rnInjectedJs/webviewLib'),
+	webviewLib: require('@joplin/lib/rnInjectedJs/webviewLib'),
 };
 
 function shimInit() {
 	shim.Geolocation = GeolocationReact;
-	shim.sjclModule = require('lib/vendor/sjcl-rn.js');
+	shim.sjclModule = require('@joplin/lib/vendor/sjcl-rn.js');
 
 	shim.fsDriver = () => {
 		if (!shim.fsDriver_) shim.fsDriver_ = new FsDriverRN();
