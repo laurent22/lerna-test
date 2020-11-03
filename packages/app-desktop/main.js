@@ -1,8 +1,5 @@
 // This is the basic initialization for the Electron MAIN process
 
-// Make it possible to require("/lib/...") without specifying full path
-// require('app-module-path').addPath(__dirname);
-
 const electronApp = require('electron').app;
 const ElectronAppWrapper = require('./ElectronAppWrapper').default;
 const { initBridge } = require('./bridge');

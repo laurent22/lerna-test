@@ -19,8 +19,6 @@ import SpellCheckerServiceDriverNative from './services/spellChecker/SpellChecke
 import bridge from './services/bridge';
 import menuCommandNames from './gui/menuCommandNames';
 
-require('app-module-path').addPath(__dirname);
-
 const { FoldersScreenUtils } = require('@joplin/lib/folders-screen-utils.js');
 const MasterKey = require('@joplin/lib/models/MasterKey');
 const Folder = require('@joplin/lib/models/Folder');
