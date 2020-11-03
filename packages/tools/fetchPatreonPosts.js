@@ -1,8 +1,6 @@
 // Fetch Patreon posts to Markdown so that we have them in a more versatile format
 // and to add them to the "News" notifications later on.
 
-require('app-module-path').addPath(`${__dirname}/../ReactNativeClient`);
-
 const fetch = require('node-fetch');
 const fs = require('fs-extra');
 const { patreonOauthToken } = require('./tool-utils');

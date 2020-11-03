@@ -1,6 +1,5 @@
 import LockHandler, { LockType, LockHandlerOptions, Lock } from '@joplin/lib/services/synchronizer/LockHandler';
 
-require('app-module-path').addPath(__dirname);
 
 const { isNetworkSyncTarget, asyncTest, fileApi, setupDatabaseAndSynchronizer, synchronizer, switchClient, msleep, expectThrow, expectNotThrow } = require('test-utils.js');
 

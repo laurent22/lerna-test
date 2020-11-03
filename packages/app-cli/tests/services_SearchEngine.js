@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint prefer-const: 0*/
 
-require('app-module-path').addPath(__dirname);
 
 const time = require('@joplin/lib/time').default;
 const { fileContentEqual, setupDatabase, setupDatabaseAndSynchronizer, asyncTest, db, synchronizer, fileApi, sleep, clearDatabase, switchClient, syncTargetId, objectsEqual, checkThrowAsync, mockDate, restoreDate } = require('test-utils.js');

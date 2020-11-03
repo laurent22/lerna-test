@@ -40,7 +40,6 @@
   "dependencies": {
     "@joplin/lib": "^0.0.0",
 	  "@joplin/renderer": "^1.0.8",
-    "app-module-path": "^2.2.0",
     "aws-sdk": "^2.588.0",
     "chalk": "^4.1.0",
     "clean-html": "^1.5.0",

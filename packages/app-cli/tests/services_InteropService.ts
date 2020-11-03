@@ -2,7 +2,6 @@ import InteropService from '@joplin/lib/services/interop/InteropService';
 import { CustomExportContext, CustomImportContext, Module, ModuleType } from '@joplin/lib/services/interop/types';
 import shim from '@joplin/lib/shim';
 
-require('app-module-path').addPath(__dirname);
 
 const { asyncTest, fileContentEqual, setupDatabaseAndSynchronizer, switchClient, checkThrowAsync } = require('test-utils.js');
 const Folder = require('@joplin/lib/models/Folder.js');

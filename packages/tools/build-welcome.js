@@ -1,5 +1,3 @@
-require('app-module-path').addPath(`${__dirname}/../ReactNativeClient`);
-
 const fs = require('fs-extra');
 const dirname = require('path').dirname;
 const { fileExtension, basename } = require('@joplin/lib/path-utils');

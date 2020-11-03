@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 
-require('app-module-path').addPath(__dirname);
 const filterParser = require('@joplin/lib/services/searchengine/filterParser.js').default;
 // import filterParser from '@joplin/lib/services/searchengine/filterParser.js';
 

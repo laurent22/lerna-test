@@ -1,4 +1,3 @@
-require('app-module-path').addPath(__dirname);
 
 const { tempFilePath } = require('test-utils.js');
 const KeymapService = require('@joplin/lib/services/KeymapService').default;

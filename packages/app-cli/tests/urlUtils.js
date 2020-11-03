@@ -1,4 +1,3 @@
-require('app-module-path').addPath(__dirname);
 
 const { asyncTest } = require('test-utils.js');
 const urlUtils = require('@joplin/lib/urlUtils.js');

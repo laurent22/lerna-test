@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 
-require('app-module-path').addPath(__dirname);
 
 const { asyncTest } = require('test-utils.js');
 const StringUtils = require('@joplin/lib/string-utils');

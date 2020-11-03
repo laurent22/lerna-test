@@ -4,7 +4,6 @@ import { ContentScriptType } from '@joplin/lib/services/plugins/api/types';
 import MdToHtml from '@joplin/renderer/MdToHtml';
 import shim from '@joplin/lib/shim';
 
-require('app-module-path').addPath(__dirname);
 const { asyncTest, setupDatabaseAndSynchronizer, switchClient, expectThrow, createTempDir } = require('test-utils.js');
 const Note = require('@joplin/lib/models/Note');
 const Folder = require('@joplin/lib/models/Folder');

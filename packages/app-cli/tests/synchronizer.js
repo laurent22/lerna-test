@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 
-require('app-module-path').addPath(__dirname);
 
 const time = require('@joplin/lib/time').default;
 const { setupDatabase, synchronizerStart, syncTargetName, allSyncTargetItemsEncrypted, tempFilePath, resourceFetcher, kvStore, revisionService, setupDatabaseAndSynchronizer, db, synchronizer, fileApi, sleep, clearDatabase, switchClient, syncTargetId, encryptionService, loadEncryptionMasterKey, fileContentEqual, decryptionWorker, checkThrowAsync, asyncTest } = require('test-utils.js');

@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 
-require('app-module-path').addPath(__dirname);
 
 const fs = require('fs-extra');
 const { asyncTest, setupDatabaseAndSynchronizer, switchClient } = require('test-utils.js');

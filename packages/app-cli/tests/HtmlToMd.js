@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 
-require('app-module-path').addPath(__dirname);
 
 const os = require('os');
 const time = require('@joplin/lib/time').default;

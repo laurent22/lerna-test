@@ -1,6 +1,5 @@
 'use strict';
 
-require('app-module-path').addPath(__dirname);
 
 const { asyncTest,checkThrow } = require('test-utils.js');
 const eventManager = require('@joplin/lib/eventManager').default;

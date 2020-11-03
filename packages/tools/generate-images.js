@@ -1,5 +1,3 @@
-require('app-module-path').addPath(`${__dirname}/../ReactNativeClient`);
-
 const dirname = require('path').dirname;
 const sharp = require('sharp');
 const fs = require('fs-extra');

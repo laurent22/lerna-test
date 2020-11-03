@@ -1,4 +1,3 @@
-require('app-module-path').addPath(__dirname);
 
 const { asyncTest, setupDatabaseAndSynchronizer, switchClient } = require('test-utils.js');
 const shim = require('@joplin/lib/shim').default;

@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 
-require('app-module-path').addPath(__dirname);
 const { setupDatabaseAndSynchronizer, switchClient, asyncTest, createNTestNotes, createNTestFolders, createNTestTags } = require('test-utils.js');
 const Folder = require('@joplin/lib/models/Folder.js');
 const Note = require('@joplin/lib/models/Note.js');

@@ -7,7 +7,6 @@ import { Dirnames } from '@joplin/lib/services/synchronizer/utils/types';
 // - Then run:
 // gulp buildTests -L && node tests-build/support/createSyncTargetSnapshot.js normal && node tests-build/support/createSyncTargetSnapshot.js e2ee
 
-require('app-module-path').addPath(__dirname);
 
 const { asyncTest, setSyncTargetName, fileApi, synchronizer, decryptionWorker, encryptionService, setupDatabaseAndSynchronizer, switchClient, expectThrow, expectNotThrow } = require('test-utils.js');
 const { deploySyncTargetSnapshot, testData, checkTestData } = require('./support/syncTargetUtils');

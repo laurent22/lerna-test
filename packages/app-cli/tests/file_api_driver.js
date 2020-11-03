@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 
-require('app-module-path').addPath(__dirname);
 
 const uuid = require('@joplin/lib/uuid').default;
 const time = require('@joplin/lib/time').default;
