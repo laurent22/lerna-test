@@ -3,6 +3,7 @@
   "description": "Joplin CLI Client",
   "license": "MIT",
   "author": "Laurent Cozic",
+  "private": true,
   "scripts": {
     "test": "node node_modules/jasmine/bin/jasmine.js --fail-fast=true --config=tests/support/jasmine.json",
     "test-ci": "node node_modules/jasmine/bin/jasmine.js --config=tests/support/jasmine.json",
