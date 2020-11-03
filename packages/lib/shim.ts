@@ -1,4 +1,5 @@
 let isTestingEnv_ = false;
+let react_:any = null;
 
 const shim = {
 	isNode: () => {
@@ -272,6 +273,15 @@ const shim = {
 
 	clearInterval: (_id:any) => {
 		throw new Error('Not implemented');
+	},
+
+	setReact: (react:any) => {
+		react_ = react;
+	},
+
+	react: () => {
+		if (!react_) throw new Error('Trying to access React before it has been set!!!'); 
+		return react_;
 	},
 };
 

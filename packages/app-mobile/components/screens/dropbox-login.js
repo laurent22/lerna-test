@@ -3,11 +3,11 @@ const React = require('react');
 const { View, Button, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView } = require('react-native');
 const { connect } = require('react-redux');
 const { ScreenHeader } = require('../screen-header.js');
-const { _ } = require('../../locale');
+const { _ } = require('@joplin/lib/locale');
 const { BaseScreenComponent } = require('../base-screen.js');
 const DialogBox = require('react-native-dialogbox').default;
-const { dialogs } = require('../../dialogs.js');
-const Shared = require('../shared/dropbox-login-shared');
+const { dialogs } = require('../../utils/dialogs.js');
+const Shared = require('@joplin/lib/components/shared/dropbox-login-shared');
 const { themeStyle } = require('../global-style.js');
 
 class DropboxLoginScreenComponent extends BaseScreenComponent {

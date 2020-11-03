@@ -27,7 +27,7 @@ import stateToWhenClauseContext from '@joplin/lib/services/commands/stateToWhenC
 import TagList from '../TagList';
 import NoteTitleBar from './NoteTitle/NoteTitleBar';
 import markupLanguageUtils from '@joplin/lib/markupLanguageUtils';
-import usePrevious from '@joplin/lib/hooks/usePrevious';
+import usePrevious from '../hooks/usePrevious';
 import Setting from '@joplin/lib/models/Setting';
 
 const { themeStyle } = require('@joplin/lib/theme');

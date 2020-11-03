@@ -1,6 +1,6 @@
 import * as React from 'react';
-import useSyncTargetUpgrade from '../../services/synchronizer/gui/useSyncTargetUpgrade';
-import { _ } from '../../locale';
+import useSyncTargetUpgrade from '@joplin/lib/services/synchronizer/gui/useSyncTargetUpgrade';
+import { _ } from '@joplin/lib/locale';
 const { View, Text, ScrollView } = require('react-native');
 
 const { connect } = require('react-redux');

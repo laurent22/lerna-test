@@ -5,7 +5,7 @@ import AsyncActionQueue from '@joplin/lib/AsyncActionQueue';
 import { handleResourceDownloadMode } from './resourceHandling';
 const { MarkupToHtml } = require('@joplin/renderer');
 const HtmlToHtml = require('@joplin/renderer/HtmlToHtml');
-const usePrevious = require('@joplin/lib/hooks/usePrevious').default;
+const usePrevious = require('../../hooks/usePrevious').default;
 const Note = require('@joplin/lib/models/Note');
 const Setting = require('@joplin/lib/models/Setting').default;
 const { reg } = require('@joplin/lib/registry.js');

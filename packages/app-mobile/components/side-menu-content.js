@@ -3,12 +3,12 @@ const Component = React.Component;
 const { Easing, Animated, TouchableOpacity, Text, StyleSheet, ScrollView, View, Alert } = require('react-native');
 const { connect } = require('react-redux');
 const Icon = require('react-native-vector-icons/Ionicons').default;
-const Folder = require('../models/Folder.js');
-const Synchronizer = require('../Synchronizer').default;
-const NavService = require('../services/NavService.js');
-const { _ } = require('../locale');
+const Folder = require('@joplin/lib/models/Folder.js');
+const Synchronizer = require('@joplin/lib/Synchronizer').default;
+const NavService = require('@joplin/lib/services/NavService.js');
+const { _ } = require('@joplin/lib/locale');
 const { themeStyle } = require('./global-style.js');
-const shared = require('./shared/side-menu-shared.js');
+const shared = require('@joplin/lib/components/shared/side-menu-shared.js');
 
 Icon.loadFont();
 

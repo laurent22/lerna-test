@@ -66,7 +66,7 @@ const buildParallel = [
 	'copyPluginAssets',
 	'copyTinyMceLangs',
 	'updateIgnoredTypeScriptBuild',
-	'linkReact',
+	// 'linkReact',
 ];
 
 gulp.task('build', gulp.parallel(...buildParallel));

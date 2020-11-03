@@ -3,22 +3,22 @@ const React = require('react');
 const { Platform, TouchableOpacity, Linking, View, Switch, StyleSheet, Text, Button, ScrollView, TextInput, Alert, PermissionsAndroid } = require('react-native');
 const { connect } = require('react-redux');
 const { ScreenHeader } = require('../screen-header.js');
-const { _ } = require('../../locale');
+const { _ } = require('@joplin/lib/locale');
 const { BaseScreenComponent } = require('../base-screen.js');
 const { Dropdown } = require('../Dropdown.js');
 const { themeStyle } = require('../global-style.js');
-const Setting = require('../../models/Setting').default;
-const shared = require('../shared/config-shared.js');
-const SyncTargetRegistry = require('../../SyncTargetRegistry');
-const { reg } = require('../../registry.js');
-const NavService = require('../../services/NavService.js');
+const Setting = require('@joplin/lib/models/Setting').default;
+const shared = require('@joplin/lib/components/shared/config-shared.js');
+const SyncTargetRegistry = require('@joplin/lib/SyncTargetRegistry');
+const { reg } = require('@joplin/lib/registry.js');
+const NavService = require('@joplin/lib/services/NavService.js');
 const VersionInfo = require('react-native-version-info').default;
-const { ReportService } = require('../../services/report.js');
-const time = require('../../time').default;
-const shim = require('../../shim').default;
-const SearchEngine = require('../../services/searchengine/SearchEngine');
+const { ReportService } = require('@joplin/lib/services/report.js');
+const time = require('@joplin/lib/time').default;
+const shim = require('@joplin/lib/shim').default;
+const SearchEngine = require('@joplin/lib/services/searchengine/SearchEngine');
 const RNFS = require('react-native-fs');
-const checkPermissions = require('../../checkPermissions.js').default;
+const checkPermissions = require('../../utils/checkPermissions.js').default;
 
 class ConfigScreenComponent extends BaseScreenComponent {
 	static navigationOptions() {

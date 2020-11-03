@@ -1,4 +1,3 @@
-import { KeyboardEvent } from 'react';
 import eventManager from '../eventManager';
 import shim from '../shim';
 import { _ } from '../locale';
@@ -350,7 +349,7 @@ export default class KeymapService extends BaseService {
 		if (!isValid) throw new Error(_('Accelerator "%s" is not valid.', accelerator));
 	}
 
-	public domToElectronAccelerator(event: KeyboardEvent<HTMLDivElement>) {
+	public domToElectronAccelerator(event:any) {
 		const parts = [];
 
 		// We use the "keyCode" and not "key" because the modifier keys

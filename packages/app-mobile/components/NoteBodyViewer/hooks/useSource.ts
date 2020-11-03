@@ -1,8 +1,8 @@
 import { useEffect, useState, useMemo } from 'react';
-import shim from '../../../shim';
-import Setting from '../../../models/Setting';
+import shim from '@joplin/lib/shim';
+import Setting from '@joplin/lib/models/Setting';
 const { themeStyle } = require('../../global-style.js');
-const markupLanguageUtils = require('../../../markupLanguageUtils').default;
+const markupLanguageUtils = require('@joplin/lib/markupLanguageUtils').default;
 const { assetsToHeaders } = require('@joplin/renderer');
 
 interface Source {
