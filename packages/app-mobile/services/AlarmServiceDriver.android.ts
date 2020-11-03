@@ -1,5 +1,5 @@
-import Logger from '../Logger';
-import { Notification } from '../models/Alarm';
+import Logger from '@joplin/lib/Logger';
+import { Notification } from '@joplin/lib/models/Alarm';
 
 const ReactNativeAN = require('react-native-alarm-notification').default;
 
