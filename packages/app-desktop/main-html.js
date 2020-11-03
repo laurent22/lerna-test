@@ -22,6 +22,7 @@ const Setting = require('@joplin/lib/models/Setting').default;
 const Revision = require('@joplin/lib/models/Revision.js');
 const Logger = require('@joplin/lib/Logger').default;
 const FsDriverNode = require('@joplin/lib/fs-driver-node').default;
+const shim = require('@joplin/lib/shim').default;
 const { shimInit } = require('@joplin/lib/shim-init-node.js');
 const EncryptionService = require('@joplin/lib/services/EncryptionService');
 const bridge = require('electron').remote.require('./bridge').default;

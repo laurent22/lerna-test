@@ -6,6 +6,7 @@
 	],
 	"settings": {
 		"files.exclude": {
+			"lerna-debug.log": true,
 			"_mydocs/mdtest/": true,
 			"_releases/": true,
 			"_vieux/": true,

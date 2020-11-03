@@ -6,7 +6,7 @@
   "scripts": {
     "test": "node node_modules/jasmine/bin/jasmine.js --fail-fast=true --config=tests/support/jasmine.json",
     "test-ci": "node node_modules/jasmine/bin/jasmine.js --config=tests/support/jasmine.json",
-    "postinstall": "npm run build && patch-package --patch-dir ./patches",
+    "postinstall": "npm run build",
     "build": "gulp build",
     "start": "gulp build -L && node \"build/main.js\" --stack-trace-enabled --log-level debug --env dev",
     "tsc": "node node_modules/typescript/bin/tsc --project tsconfig.json",
@@ -50,7 +50,6 @@
     "image-type": "^3.0.0",
     "md5": "^2.2.1",
     "open": "^7.0.4",
-    "patch-package": "^6.2.2",
     "proper-lockfile": "^2.0.1",
     "read-chunk": "^2.1.0",
     "server-destroy": "^1.0.1",
@@ -70,7 +69,6 @@
     "@types/node": "^14.14.6",
     "gulp": "^4.0.2",
     "jasmine": "^3.5.0",
-    "patch-package": "^6.2.2",
     "temp": "^0.9.1",
     "typescript": "^4.0.5"
   }

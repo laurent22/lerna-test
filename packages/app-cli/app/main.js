@@ -24,6 +24,7 @@ const Logger = require('@joplin/lib/Logger').default;
 const FsDriverNode = require('@joplin/lib/fs-driver-node').default;
 const sharp = require('sharp');
 const { shimInit } = require('@joplin/lib/shim-init-node.js');
+const shim = require('@joplin/lib/shim').default;
 const { _ } = require('@joplin/lib/locale');
 const { FileApiDriverLocal } = require('@joplin/lib/file-api-driver-local.js');
 const EncryptionService = require('@joplin/lib/services/EncryptionService');

@@ -7,11 +7,10 @@
   "scripts": {
     "start": "react-native start --reset-cache",
     "build": "gulp build",
-    "patch-packages": "patch-package --patch-dir ../../patches/shared",
     "tsc": "node node_modules/typescript/bin/tsc --project tsconfig.json",
     "watch": "node node_modules/typescript/bin/tsc --watch --project tsconfig.json",
     "preinstall": "node tools/unlinkReact.js",
-    "postinstall": "npm run patch-packages && jetify && npm run build"
+    "postinstall": "jetify && npm run build"
   },
   "dependencies": {
     "@joplin/lib": "^0.0.0",
@@ -65,7 +64,6 @@
     "gulp": "^4.0.2",
     "jetifier": "^1.6.5",
     "metro-react-native-babel-preset": "^0.63.0",
-    "patch-package": "^6.2.2",
     "typescript": "^4.0.5"
   }
 }

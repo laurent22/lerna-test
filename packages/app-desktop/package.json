@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "dist": "node_modules/.bin/electron-builder",
-    "build": "patch-package --patch-dir ../../patches/shared && patch-package --patch-dir ../../patches/node && gulp build",
+    "build": "gulp build",
     "preinstall": "node tools/unlinkReact",
     "postinstall": "npm run build && gulp electronRebuild",
     "tsc": "node node_modules/typescript/bin/tsc --project tsconfig.json",
@@ -111,7 +111,6 @@
     "glob": "^7.1.6",
     "gulp": "^4.0.2",
     "js-sha512": "^0.8.0",
-    "patch-package": "^6.2.2",
     "typescript": "^4.0.5"
   },
   "optionalDependencies": {

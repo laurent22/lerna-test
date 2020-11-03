@@ -22,23 +22,6 @@ tasks.prepareBuild = {
 		await utils.copyFile(`${__dirname}/package-lock.json`, `${buildDir}/package-lock.json`);
 		await utils.copyFile(`${__dirname}/gulpfile.js`, `${buildDir}/gulpfile.js`);
 
-		// Import all the patches inside the packages/app-cli directory
-		// and build file. Needs to be in packages/app-cli dir for when running
-		// in dev mode, and in build dir for production.
-		const localPatchDir = `${buildDir}/patches`;
-		await fs.remove(localPatchDir);
-		await fs.mkdirp(localPatchDir);
-		await utils.copyDir(`${__dirname}/../../patches/shared`, `${localPatchDir}`, { delete: false });
-		await utils.copyDir(`${__dirname}/../../patches/node`, `${localPatchDir}`, { delete: false });
-
-		await fs.remove(`${__dirname}/patches`);
-		await utils.copyDir(`${localPatchDir}`, `${__dirname}/patches`);
-
-		const packageRaw = await fs.readFile(`${buildDir}/package.json`);
-		const package = JSON.parse(packageRaw.toString());
-		package.scripts.postinstall = 'patch-package';
-		await fs.writeFile(`${buildDir}/package.json`, JSON.stringify(package, null, 2), 'utf8');
-
 		fs.chmodSync(`${buildDir}/main.js`, 0o755);
 	},
 };

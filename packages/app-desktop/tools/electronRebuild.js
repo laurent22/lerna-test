@@ -34,14 +34,14 @@ async function main() {
 	process.chdir(`${__dirname}/..`);
 
 	if (isWindows()) {
-		const promises = [
-			execCommand([`"${exePath}"`, '--arch ia32'].join(' ')),
-			execCommand([`"${exePath}"`, '--arch x64'].join(' ')),
-		];
+		// const promises = [
+		// 	execCommand([`"${exePath}"`, '--arch ia32'].join(' ')),
+		// 	execCommand([`"${exePath}"`, '--arch x64'].join(' ')),
+		// ];
 
-		await Promise.all(promises);
-		// console.info(await execCommand([`"${exePath}"`, '--arch ia32'].join(' ')));
-		// console.info(await execCommand([`"${exePath}"`, '--arch x64'].join(' ')));
+		// await Promise.all(promises);
+		console.info(await execCommand([`"${exePath}"`, '--arch ia32'].join(' ')));
+		console.info(await execCommand([`"${exePath}"`, '--arch x64'].join(' ')));
 	} else {
 		console.info(await execCommand([`"${exePath}"`].join(' ')));
 	}
