@@ -1,6 +1,6 @@
 {
   "name": "@joplinapp/tools",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Various tools for Joplin",
   "main": "index.js",
   "author": "Laurent Cozic",
@@ -8,15 +8,15 @@
     "updateIgnored": "gulp updateIgnoredTypeScriptBuild"
   },
   "publishConfig": {
-		"access": "public"
-	},
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/laurent22/joplin.git"
   },
   "license": "MIT",
   "dependencies": {
-    "@joplinapp/lib": "^1.0.4",
+    "@joplinapp/lib": "^1.0.5",
     "execa": "^4.1.0",
     "fs-extra": "^4.0.3",
     "gettext-parser": "^1.3.0",
