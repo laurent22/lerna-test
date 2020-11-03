@@ -272,7 +272,7 @@ function importEnex(parentFolderId, filePath, importOptions = null) {
 
 		const options = {};
 		const strict = true;
-		const saxStream = require('sax').createStream(strict, options);
+		const saxStream = require('@joplin/fork-sax').createStream(strict, options);
 
 		const nodes = []; // LIFO list of nodes so that we know in which node we are in the onText event
 		let note = null;
