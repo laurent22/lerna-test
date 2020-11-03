@@ -9,7 +9,7 @@ import shim from '../../shim';
 // it seems to cause the following error when loading Sharp:
 //
 // Something went wrong installing the "sharp" module
-// /lib/x86_64-linux-gnu/libz.so.1: version `ZLIB_1.2.9' not found (required by /home/travis/build/laurent22/joplin/CliClient/node_modules/sharp/build/Release/../../vendor/lib/libpng16.so.16)
+// /lib/x86_64-linux-gnu/libz.so.1: version `ZLIB_1.2.9' not found (required by /home/travis/build/laurent22/joplin/packages/app-cli/node_modules/sharp/build/Release/../../vendor/lib/libpng16.so.16)
 //
 // See: https://travis-ci.org/github/laurent22/joplin/jobs/686222036
 //

@@ -22,8 +22,8 @@ tasks.prepareBuild = {
 		await utils.copyFile(`${__dirname}/package-lock.json`, `${buildDir}/package-lock.json`);
 		await utils.copyFile(`${__dirname}/gulpfile.js`, `${buildDir}/gulpfile.js`);
 
-		// Import all the patches inside the CliClient directory
-		// and build file. Needs to be in CliClient dir for when running
+		// Import all the patches inside the packages/app-cli directory
+		// and build file. Needs to be in packages/app-cli dir for when running
 		// in dev mode, and in build dir for production.
 		const localPatchDir = `${buildDir}/patches`;
 		await fs.remove(localPatchDir);
@@ -59,12 +59,12 @@ tasks.prepareTestBuild = {
 
 		// const rootDir = utils.rootDir();
 
-		// await utils.copyDir(`${rootDir}/ReactNativeClient/lib`, `${testBuildDir}/lib`, {
+		// await utils.copyDir(`${rootDir}/packages/app-mobile/lib`, `${testBuildDir}/lib`, {
 		// 	excluded: [
-		// 		`${rootDir}/ReactNativeClient/lib/joplin-renderer/node_modules`,
+		// 		`${rootDir}/packages/app-mobile/lib/joplin-renderer/node_modules`,
 		// 	],
 		// });
-		// await utils.copyDir(`${rootDir}/ReactNativeClient/locales`, `${testBuildDir}/locales`);
+		// await utils.copyDir(`${rootDir}/packages/app-mobile/locales`, `${testBuildDir}/locales`);
 		await fs.mkdirp(`${testBuildDir}/data`);
 	},
 };

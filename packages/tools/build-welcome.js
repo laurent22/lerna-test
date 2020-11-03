@@ -141,7 +141,7 @@ async function main() {
 	const content = { notes: notes, folders: folders, tags: tags, timestamp: createdDate.getTime() };
 	const jsonContent = JSON.stringify(content, null, 4);
 	const jsContent = `module.exports = ${jsonContent}`;
-	fs.writeFileSync(`${rootDir}/ReactNativeClient/lib/welcomeAssets.js`, jsContent, { encoding: 'utf8' });
+	fs.writeFileSync(`${rootDir}/packages/app-mobile/lib/welcomeAssets.js`, jsContent, { encoding: 'utf8' });
 }
 
 main().catch((error) => {

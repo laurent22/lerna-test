@@ -82,7 +82,7 @@ async function createPotFile(potFilePath) {
 		'./**/node_modules/*',
 		'./Assets/*',
 		'./docs/*',
-		'./Modules/*',
+		'./Assets/TinyMCE/*',
 		'./node_modules/*',
 		'./packages/app-cli/build/*',
 		'./packages/app-cli/locales-build/*',
